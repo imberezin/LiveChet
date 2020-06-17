@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
-import FBSDKCoreKit
-import GoogleSignIn
-import TwitterKit
+//import FBSDKCoreKit
+//import GoogleSignIn
+//import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,16 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // UserDefaults.standard.set(false, forKey: "status")
 
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID//"246529891635-c0efbithme6iuk3julhvfps1am888i0l.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID//"246529891635-c0efbithme6iuk3julhvfps1am888i0l.apps.googleusercontent.com"
+//
+//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-
-        let consumerKey = Bundle.main.object(forInfoDictionaryKey: "consumerKey")
-        let consumerSecret = Bundle.main.object(forInfoDictionaryKey: "consumerSecret")
-
-        if let key = consumerKey as? String, let secret = consumerSecret as? String{
-            TWTRTwitter.sharedInstance().start(withConsumerKey: key, consumerSecret: secret)
-        }
+//        let consumerKey = Bundle.main.object(forInfoDictionaryKey: "consumerKey")
+//        let consumerSecret = Bundle.main.object(forInfoDictionaryKey: "consumerSecret")
+//
+//        if let key = consumerKey as? String, let secret = consumerSecret as? String{
+//            TWTRTwitter.sharedInstance().start(withConsumerKey: key, consumerSecret: secret)
+//        }
 
         return true
     }

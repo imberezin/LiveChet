@@ -18,7 +18,7 @@
 		B71763C224864DEE00B98A6C /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763C124864DEE00B98A6C /* LoginVM.swift */; };
 		B71763C624865C7100B98A6C /* CurrUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763C524865C7100B98A6C /* CurrUserVM.swift */; };
 		B71763CA2486742000B98A6C /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763C92486742000B98A6C /* ForgetPasswordView.swift */; };
-		B723A6C1248E24E2008C7D8B /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = B723A6C0248E24E2008C7D8B /* TextView */; };
+		B723A6C1248E24E2008C7D8B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B723A6C0248E24E2008C7D8B /* SwiftPackageProductDependency */; };
 		B723A6C3248EB90B008C7D8B /* AllGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723A6C2248EB90B008C7D8B /* AllGroupsView.swift */; };
 		B723A6C5248ECA25008C7D8B /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723A6C4248ECA25008C7D8B /* GroupView.swift */; };
 		B752A6DE2484F7EF00513FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752A6DD2484F7EF00513FCF /* AppDelegate.swift */; };
@@ -143,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B723A6C1248E24E2008C7D8B /* TextView in Frameworks */,
+				B723A6C1248E24E2008C7D8B /* BuildFile in Frameworks */,
 				20167229ADA92C89B7F1E14E /* Pods_testChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +389,6 @@
 				B752A6D72484F7EF00513FCF /* Frameworks */,
 				B752A6D82484F7EF00513FCF /* Resources */,
 				1684EA6F874940A04D6C2B5C /* [CP] Embed Pods Frameworks */,
-				3349B0D3C9085B20E3567D6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,7 +396,7 @@
 			);
 			name = testChat;
 			packageProductDependencies = (
-				B723A6C0248E24E2008C7D8B /* TextView */,
+				B723A6C0248E24E2008C7D8B /* SwiftPackageProductDependency */,
 			);
 			productName = testChat;
 			productReference = B752A6DA2484F7EF00513FCF /* Live Chat.app */;
@@ -431,7 +430,6 @@
 				B752A6F82484F7F100513FCF /* Frameworks */,
 				B752A6F92484F7F100513FCF /* Resources */,
 				6FEC88C1603EFC171C19EB0B /* [CP] Embed Pods Frameworks */,
-				85A0D14AF752268648241D7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,7 +474,7 @@
 			);
 			mainGroup = B752A6D12484F7EF00513FCF;
 			packageReferences = (
-				B723A6BF248E24E2008C7D8B /* XCRemoteSwiftPackageReference "TextView" */,
+				B723A6BF248E24E2008C7D8B /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = B752A6DB2484F7EF00513FCF /* Products */;
 			projectDirPath = "";
@@ -557,23 +555,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3349B0D3C9085B20E3567D6C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testChat/Pods-testChat-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testChat/Pods-testChat-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testChat/Pods-testChat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6FEC88C1603EFC171C19EB0B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,23 +570,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85A0D14AF752268648241D7B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1028220C05CA84F4F49F0C1 /* [CP] Check Pods Manifest.lock */ = {
@@ -1028,7 +992,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B723A6BF248E24E2008C7D8B /* XCRemoteSwiftPackageReference "TextView" */ = {
+		B723A6BF248E24E2008C7D8B /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kenmueller/TextView";
 			requirement = {
@@ -1039,9 +1003,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B723A6C0248E24E2008C7D8B /* TextView */ = {
+		B723A6C0248E24E2008C7D8B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B723A6BF248E24E2008C7D8B /* XCRemoteSwiftPackageReference "TextView" */;
+			package = B723A6BF248E24E2008C7D8B /* RemoteSwiftPackageReference */;
 			productName = TextView;
 		};
 /* End XCSwiftPackageProductDependency section */
