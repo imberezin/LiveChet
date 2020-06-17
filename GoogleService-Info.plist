@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>246529891635-c0efbithme6iuk3julhvfps1am888i0l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.246529891635-c0efbithme6iuk3julhvfps1am888i0l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCuI3sEgMhIwN_YnHdgsFe904YdSKz9Lkw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>246529891635</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.israel.berezin.Smack.IBBreakpoint</string>
+	<key>PROJECT_ID</key>
+	<string>imbreakpoint</string>
+	<key>STORAGE_BUCKET</key>
+	<string>imbreakpoint.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:246529891635:ios:4c489f5936ba8c88</string>
+	<key>DATABASE_URL</key>
+	<string>https://imbreakpoint.firebaseio.com</string>
+</dict>
+</plist>
