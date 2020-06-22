@@ -8,6 +8,7 @@
 
 import SwiftUI
 import UIKit
+import URLImage
 
 struct MeView: View {
     
@@ -52,20 +53,34 @@ struct MeView: View {
                         
                         
                     VStack(alignment: .center, spacing: 25){
-                        
-                        Button(action: {
-                            print("Update User Image")
-                        }) {
-                            self.currUserVM.userImage
-                                .renderingMode(.original)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 120, height: 120)
-                                .clipShape(Circle())
-                                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                        }.padding(.bottom, 25)
+                        if self.currUserVM.userImageUrl != nil{
+                            
+                            URLImage(self.currUserVM.userImageUrl!) { proxy in
+                                proxy.image
+                                    .renderingMode(.original)
+                                    .resizable()                     // Make image resizable
+                                    .aspectRatio(contentMode: .fill) // Fill the frame
+                                    .clipShape(Circle())
+                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                            }
+                            .frame(width: 120, height: 120)
+                            .padding(.bottom, 25)// Set frame to 100x100.
 
+                        } else {
+                            Button(action: {
+                                print("Update User Image")
+                            }) {
+                                self.currUserVM.userImage
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 120, height: 120)
+                                    .clipShape(Circle())
+                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                            }.padding(.bottom, 25)
+                        }
 
                         Button(action: {
                             print("Update User Passowrd")

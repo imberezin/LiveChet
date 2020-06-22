@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct HomeTopView: View {
     
@@ -34,13 +35,25 @@ struct HomeTopView: View {
                             Button(action: {
                                 self.showLogoutView.toggle()
                             }) {
-                                
-                                self.currUserVM.userImage
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 30, height: 30)
-                                    .clipShape(Circle())
+                                if self.currUserVM.userImageUrl != nil{
+                                    
+                                    URLImage(self.currUserVM.userImageUrl!) { proxy in
+                                        proxy.image
+                                            .renderingMode(.original)
+                                            .resizable()                     // Make image resizable
+                                            .aspectRatio(contentMode: .fill) // Fill the frame
+                                            .clipShape(Circle())
+                                    }
+                                    .frame(width: 30, height: 30)  // Set frame to 100x100.
+
+                                }else{
+                                    self.currUserVM.userImage
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 30, height: 30)
+                                        .clipShape(Circle())
+                                }
                             }
                         }
                         Text("Feed")

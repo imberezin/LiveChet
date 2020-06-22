@@ -23,9 +23,10 @@ struct MainLoginView: View {
     @State var height : CGFloat = 0
     
     @ObservedObject var loginVM: LoginVM = LoginVM()
+    //  var googleServise = GoogleServise()
     
     @State var showForgetPassView: Bool = false
-        
+    
     var body: some View {
         
         ZStack{
@@ -120,79 +121,91 @@ struct MainLoginView: View {
                                 .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 2, x: -2, y: -2)
                             Spacer()
                             Text("Or")
-                               .font(.headline)
-                               .fontWeight(.semibold)
-                               .foregroundColor(Color.white)
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)
                             Spacer()
-
+                            
                             Rectangle().fill(Color.white)
                                 .frame(height: 2, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 4))
                                 .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 2, x: 2, y: 2)
                                 .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 2, x: -2, y: -2)
-
+                            
                         }
                         .padding()
                         .padding(.top, -10)
-
-
+                        
+                        
                         HStack(spacing: 30){
                             Button(action: {
                                 self.loginVM.biometricLogin()
                             }) {
-
-                            self.loginVM.biometricImage()
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 50, height: 50)
-                                .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-
-                            .clipShape(Circle())
-                            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                                
+                                self.loginVM.biometricImage()
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.all,5)
+                                    .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
+                                    .clipShape(Circle())
+                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
                             }
-                            Image("google")
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 50, height: 50)
-                            .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                            .clipShape(Circle())
-                            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-
-                            Image("fb")
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 50, height: 50)
-                            .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                            .clipShape(Circle())
-                            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
                             
-                            Image("twitter")
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 50, height: 50)
-                            .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                            .clipShape(Circle())
-                            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-
-
+                            Button(action: {
+                                self.loginVM.loginWIthGoogle()
+                            }) {
+                                
+                                Image("google")
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.all,5)
+                                    .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
+                                    .clipShape(Circle())
+                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                            }
+                            Image("fb")
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 40, height: 40)
+                                .padding(.all,5)
+                                .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
+                                .clipShape(Circle())
+                                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                            
+                            Button(action: {
+                                self.loginVM.loginWithApple()
+                            }) {
+                                
+                                Image("appleLogin")
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.all,5)
+                                    .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
+                                    .clipShape(Circle())
+                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                                
+                            }
                         }
                         Spacer(minLength: self.height )
-
+                        
                         
                     }
                     .padding(.top, 10)
                     
                 }
             }.onAppear {
-                
+                //  self.loginVM.test()
                 self.keyboardNotifcations()
             }
             if self.loginVM.alert{

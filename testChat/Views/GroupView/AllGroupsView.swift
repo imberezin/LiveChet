@@ -59,31 +59,59 @@ struct AllGroupsView: View {
 
                 
                 if feedVM.groupsArray.count > 0 {
+                    
                     List(feedVM.groupsArray){ group in
-                        NavigationLink(destination: GroupView(selectedGroup: group)){
-                            HStack(alignment: .top, spacing: 12){
-//                                if self.feedVM.updateView{
-//                                    EmptyView()
-//                                }
-                                VStack(alignment: .leading, spacing: 12) {
+                        if group.key == "000"{
+                            HStack(alignment: .center, spacing: 12){
+                                VStack(alignment: .center, spacing: 12) {
                                     
-                                    Text(group.groupTitle.uppercased())
+                                    Text("You are not meember in any Group yet\n")
                                         .font(.headline)
-                                        .fontWeight(.semibold)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.center)
                                     
-                                    Text(group.groupDesc).font(.footnote)
-                                    
-                                    Text("\(group.memberCount) Members").font(.footnote)
+                                    Text("Tap on ➕ to create youe group")
+                                        .font(.headline)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.center)
+
                                     
                                 }
                                 
                                 Spacer(minLength: 0)
                                 
                             }.padding(.vertical)
-                            
-                            
+
+                        } else{
+                            NavigationLink(destination: GroupView(selectedGroup: group)){
+                                HStack(alignment: .top, spacing: 12){
+    //                                if self.feedVM.updateView{
+    //                                    EmptyView()
+    //                                }
+                                    VStack(alignment: .leading, spacing: 12) {
+                                        
+                                        Text(group.groupTitle.uppercased())
+                                            .font(.headline)
+                                            .fontWeight(.semibold)
+                                        
+                                        Text(group.groupDesc).font(.footnote)
+                                        
+                                        Text("\(group.memberCount) Members").font(.footnote)
+                                        
+                                    }
+                                    
+                                    Spacer(minLength: 0)
+                                    
+                                }.padding(.vertical)
+                            }
                         }
                     }.padding(.top,16)
+                    .onAppear {
+                        UITableView.appearance().separatorStyle = .none
+                    }
+                    .onDisappear {
+                        UITableView.appearance().separatorStyle = .singleLine
+                    }
                 }else{
                     List{
                         

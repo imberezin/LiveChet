@@ -5,16 +5,24 @@ import Foundation
 import Firebase
 
 let DB_BASE = Database.database().reference()
-typealias UserNameAndImage =  (name: String, userImage: String?, key: String)
+//typealias UserNameAndImage =  (name: String, userImage: String?, key: String)
+typealias FullDBUser =  (name: String, provider: String, userImage: String?, userImageUrl: String?, key: String)
+typealias BasicDBUser =  (key: String, name: String)
+
 
 class DataService {
     static let instance = DataService()
     
     private var _REF_BASE = DB_BASE
     private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_USERS_IDS = DB_BASE.child("usersIds")
+
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_FEED = DB_BASE.child("feed")
+//    let a = Database.database().reference(withPath: "users/email")//.child("email")
     
+//    let myTopPostsQuery = (REF_BASE.child("users").child(getUid())).queryOrdered(byChild: "starCount")
+
     var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
@@ -23,6 +31,10 @@ class DataService {
         return _REF_USERS
     }
     
+    var REF_USERS_IDS: DatabaseReference {
+        return _REF_USERS_IDS
+    }
+
     var REF_GROUPS: DatabaseReference {
         return _REF_GROUPS
     }
@@ -33,6 +45,8 @@ class DataService {
     
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
+        
+        REF_USERS_IDS.child(uid).updateChildValues(["email":userData["email"]!])
     }
     
     func updateUserImage(image: String){
@@ -53,21 +67,44 @@ class DataService {
         }
     }
 
-    func getUser(forUID uid: String, handler: @escaping (_ username: String, _ userImage: String?) -> ()) {
+    func getUser(forUID uid: String, handler: @escaping (_ fullDBUser: FullDBUser?) -> ()) {
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
             for user in userSnapshot {
                 if user.key == uid {
-                    handler(user.childSnapshot(forPath: "email").value as! String, user.childSnapshot(forPath: "userImage").value as? String)
+                    handler((name: user.childSnapshot(forPath: "email").value as! String,provider: user.childSnapshot(forPath: "provider").value as! String, userImage: user.childSnapshot(forPath: "userImage").value as? String, userImageUrl :user.childSnapshot(forPath: "userImageUrl").value as? String, key: user.key))
 
                 }
             }
         }
     }
 
+    func getAllBasicUsersData(_ handler: @escaping (_ allUsers : [BasicDBUser]) -> ()) {
+        
+        var allUsers : [BasicDBUser] = []
 
-    func getUsers(forUID uids: [String], handler: @escaping (_ allUsers : [UserNameAndImage]) -> ()) {
-        var allUsers : [UserNameAndImage] = []
+        REF_USERS_IDS.observeSingleEvent(of: .value) { (userSnapshot) in
+            
+//            let userSnapshot1 = userSnapshot.childrenCount
+//
+//            print(userSnapshot1)
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else {
+                return
+                
+            }
+            for user in userSnapshot { // provider
+                
+                let user: BasicDBUser = (key: user.key, name: user.childSnapshot(forPath: "email").value as! String)
+                
+                allUsers.append(user)
+            }
+            handler(allUsers)
+
+        }
+    }
+
+    func getUsers(forUID uids: [String], handler: @escaping (_ allUsers : [FullDBUser]) -> ()) {
+        var allUsers : [FullDBUser] = []
 
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
@@ -75,7 +112,7 @@ class DataService {
                 if let row = uids.firstIndex(where: {$0 == user.key}){
 
                     let curr = userSnapshot[row]
-                    allUsers.append((name: curr.childSnapshot(forPath: "email").value as! String, userImage: curr.childSnapshot(forPath: "userImage").value as? String, key: user.key))
+                    allUsers.append((name: curr.childSnapshot(forPath: "email").value as! String,provider: curr.childSnapshot(forPath: "provider").value as! String, userImage: curr.childSnapshot(forPath: "userImage").value as? String, userImageUrl :curr.childSnapshot(forPath: "userImageUrl").value as? String, key: user.key))
                 }
             }
             handler(allUsers)
@@ -83,8 +120,11 @@ class DataService {
         }
     }
 
+    /*
+     Cannot convert value of type '(name: String, userImage: String?, userImageUrl: String?, key: String)' to expected argument type 'FullDBUser' (aka '(name: String, provider: String, userImage: Optional<String>, userImageUrl: Optional<String>, key: String)')
+     */
     
-    func getUsersFor(group: Group, handler: @escaping (_ usersGroupArray: [UserNameAndImage]) -> ()) {
+    func getUsersFor(group: Group, handler: @escaping (_ usersGroupArray: [FullDBUser]) -> ()) {
         
         self.getUsers(forUID: group.members) { (theUserNameAndImage) in
             handler(theUserNameAndImage)

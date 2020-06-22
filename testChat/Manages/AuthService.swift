@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import GoogleSignIn
 
 class AuthService {
     static let instance = AuthService()
@@ -37,5 +38,56 @@ class AuthService {
         }
     }
     
+    func addProviderUserIfNeeded(_ userCreationComplete: @escaping (_ status: Bool, _ error:Error?) ->()){
+        
+        DataService.instance.getAllBasicUsersData(){ fullDBUsers in
+            if fullDBUsers.count > 0 {
+                
+                if let currUser: Firebase.User = Auth.auth().currentUser {
+                    
+                    var isUserExist = false
+                    for user in fullDBUsers{
+                        if user.key == currUser.uid{
+                            isUserExist = true
+                            break
+                        }
+                    }
+                    if isUserExist {
+                        
+                        userCreationComplete(true, nil)
+                        
+                    } else {
+                        
+                        self.addNewUserToDB()
+                        userCreationComplete(true, nil)
+                        
+                    }
+                }else{
+                    //user not login
+                    userCreationComplete(false, nil)
+
+                }
+            } else {
+                // it first user!
+                self.addNewUserToDB()
+                userCreationComplete(true, nil)
+            }
+        }
+    }
+    
+    func addNewUserToDB(){
+        
+        if let currUser: Firebase.User = Auth.auth().currentUser, let provider = currUser.providerData.first?.providerID {
+
+            
+            var userData = ["provider": provider, "email": currUser.email]
+            if let userImageUrl = currUser.providerData.first?.photoURL{
+                let urlString: String = userImageUrl.absoluteString
+                 userData = ["provider": provider, "email": currUser.email!, "userImageUrl": urlString]
+            }
+            DataService.instance.createDBUser(uid: currUser.uid, userData: userData as Dictionary<String, Any>)
+        
+        }
+    }
     
 }

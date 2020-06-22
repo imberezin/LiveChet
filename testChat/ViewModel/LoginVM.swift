@@ -18,6 +18,9 @@ class LoginVM: ObservableObject {
 
     private let biometricIDAuth = BiometricIDAuth()
 
+    private let googleServise: GoogleLoginServise = GoogleLoginServise()
+    
+    private let appleLoginServise: AppleLoginServise = AppleLoginServise()
     
     func biometricImage() -> Image {
         return self.biometricIDAuth.biometricUIImage()
@@ -85,6 +88,23 @@ class LoginVM: ObservableObject {
 
     }
     
+    
+    func loginWIthGoogle(){
+        self.googleServise.login { isLogin in
+            print("isLogin = \(isLogin)")
+            UserDefaults.standard.set(isLogin, forKey: "status")
+            NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+        }
+    }
+    
+    func loginWithApple(){
+        self.appleLoginServise.handleSignInWithApple(){ isLogin in
+            print("isLogin = \(isLogin)")
+            UserDefaults.standard.set(isLogin, forKey: "status")
+            NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+        }
+    }
+    
     func logout(){
         try! Auth.auth().signOut()
         UserDefaults.standard.set(false, forKey: "status")
@@ -147,5 +167,14 @@ class LoginVM: ObservableObject {
         
      }
     
+    
+    func test(){
+        AuthService.instance.addProviderUserIfNeeded(){ status, error in
+            
+                print("aaa")
+            
+        }
+
+    }
 }
 

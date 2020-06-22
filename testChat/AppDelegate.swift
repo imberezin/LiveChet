@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 //import FBSDKCoreKit
-//import GoogleSignIn
+import GoogleSignIn
 //import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
 
 
 
@@ -22,7 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // UserDefaults.standard.set(false, forKey: "status")
 
         FirebaseApp.configure()
-//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID//"246529891635-c0efbithme6iuk3julhvfps1am888i0l.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID//"246529891635-c0efbithme6iuk3julhvfps1am888i0l.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().delegate = self
+
+        GIDSignIn.sharedInstance()
 //
 //        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
@@ -53,3 +58,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+
+
+//struct SocialLogin: UIViewRepresentable {
+//
+//    func makeUIView(context: UIViewRepresentableContext<SocialLogin>) -> UIView {
+//        return UIView()
+//    }
+//
+//    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<SocialLogin>) {
+//    }
+//
+//    func attemptLoginGoogle() {
+//        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+//        GIDSignIn.sharedInstance()?.signIn()
+//    }
+//
+//    func attemptLoginFb(completion: @escaping (_ result: FBSDKLoginManagerLoginResult?, _ error: Error?) -> Void) {
+//        let fbLoginManager: FBSDKLoginManager = FBSDKLoginManager()
+//        fbLoginManager.logOut()
+//        fbLoginManager.logIn(withReadPermissions: ["email"], from: UIApplication.shared.windows.last?.rootViewController) { (result, error) -> Void in
+//            completion(result, error)
+//        }
+//    }
+//
+//}

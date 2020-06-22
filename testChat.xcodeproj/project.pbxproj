@@ -10,15 +10,20 @@
 		20167229ADA92C89B7F1E14E /* Pods_testChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7124D42508A535153F0FF8AB /* Pods_testChat.framework */; };
 		932D1A2C05099DA7B74667E8 /* Pods_testChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EB006FA013D4607DFB74F8 /* Pods_testChatTests.framework */; };
 		AF0BE1007F830C77288DD6D6 /* Pods_testChat_testChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC65906E920DA4A8CBC6931F /* Pods_testChat_testChatUITests.framework */; };
+		B700EB7D249F63A600EA4332 /* GoogleLoginServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700EB7C249F63A600EA4332 /* GoogleLoginServise.swift */; };
+		B700EB7F249F681B00EA4332 /* AppleLoginServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700EB7E249F681B00EA4332 /* AppleLoginServise.swift */; };
+		B700EB81249F69E000EA4332 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700EB80249F69E000EA4332 /* String+Crypto.swift */; };
+		B700EB83249F6F4F00EA4332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B700EB82249F6F4F00EA4332 /* GoogleService-Info.plist */; };
+		B700EB8724A09BE100EA4332 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = B700EB8624A09BE100EA4332 /* URLImage */; };
 		B71763B4248639C100B98A6C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763B3248639C100B98A6C /* LoginView.swift */; };
 		B71763B624863A0300B98A6C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763B524863A0300B98A6C /* RegisterView.swift */; };
 		B71763B82486402400B98A6C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763B72486402400B98A6C /* ErrorView.swift */; };
-		B71763BA248641BF00B98A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B71763B9248641BF00B98A6C /* GoogleService-Info.plist */; };
+		B71763BA248641BF00B98A6C /* GoogleService-InfoOld.plist in Resources */ = {isa = PBXBuildFile; fileRef = B71763B9248641BF00B98A6C /* GoogleService-InfoOld.plist */; };
 		B71763BC24864C1100B98A6C /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763BB24864C1100B98A6C /* HomeScreenView.swift */; };
 		B71763C224864DEE00B98A6C /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763C124864DEE00B98A6C /* LoginVM.swift */; };
 		B71763C624865C7100B98A6C /* CurrUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763C524865C7100B98A6C /* CurrUserVM.swift */; };
 		B71763CA2486742000B98A6C /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763C92486742000B98A6C /* ForgetPasswordView.swift */; };
-		B723A6C1248E24E2008C7D8B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B723A6C0248E24E2008C7D8B /* SwiftPackageProductDependency */; };
+		B723A6C1248E24E2008C7D8B /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = B723A6C0248E24E2008C7D8B /* TextView */; };
 		B723A6C3248EB90B008C7D8B /* AllGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723A6C2248EB90B008C7D8B /* AllGroupsView.swift */; };
 		B723A6C5248ECA25008C7D8B /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723A6C4248ECA25008C7D8B /* GroupView.swift */; };
 		B752A6DE2484F7EF00513FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752A6DD2484F7EF00513FCF /* AppDelegate.swift */; };
@@ -85,10 +90,15 @@
 		898873DBF31D77A45D14342E /* Pods-testChat-testChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testChat-testChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABDA2F202FC3E47B91A5B50B /* Pods-testChat-testChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testChat-testChatUITests.release.xcconfig"; path = "Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AC65906E920DA4A8CBC6931F /* Pods_testChat_testChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testChat_testChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B700EB7C249F63A600EA4332 /* GoogleLoginServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginServise.swift; sourceTree = "<group>"; };
+		B700EB7E249F681B00EA4332 /* AppleLoginServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginServise.swift; sourceTree = "<group>"; };
+		B700EB80249F69E000EA4332 /* String+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		B700EB82249F6F4F00EA4332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B700EB84249F702800EA4332 /* Live Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Live Chat.entitlements"; sourceTree = "<group>"; };
 		B71763B3248639C100B98A6C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B71763B524863A0300B98A6C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B71763B72486402400B98A6C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		B71763B9248641BF00B98A6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B71763B9248641BF00B98A6C /* GoogleService-InfoOld.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-InfoOld.plist"; sourceTree = SOURCE_ROOT; };
 		B71763BB24864C1100B98A6C /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		B71763C124864DEE00B98A6C /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		B71763C524865C7100B98A6C /* CurrUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrUserVM.swift; sourceTree = "<group>"; };
@@ -143,7 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B723A6C1248E24E2008C7D8B /* BuildFile in Frameworks */,
+				B723A6C1248E24E2008C7D8B /* TextView in Frameworks */,
+				B700EB8724A09BE100EA4332 /* URLImage in Frameworks */,
 				20167229ADA92C89B7F1E14E /* Pods_testChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +244,8 @@
 				B7FD0C502497951500008BA6 /* TouchIDAuthentication.swift */,
 				B7D3C6582496166500B974BB /* AuthService.swift */,
 				B7EC4AB624878DF10035B496 /* DataService.swift */,
+				B700EB7C249F63A600EA4332 /* GoogleLoginServise.swift */,
+				B700EB7E249F681B00EA4332 /* AppleLoginServise.swift */,
 			);
 			path = Manages;
 			sourceTree = "<group>";
@@ -262,9 +275,10 @@
 		B752A6DC2484F7EF00513FCF /* testChat */ = {
 			isa = PBXGroup;
 			children = (
+				B700EB84249F702800EA4332 /* Live Chat.entitlements */,
 				B752A6DD2484F7EF00513FCF /* AppDelegate.swift */,
 				B752A6DF2484F7EF00513FCF /* SceneDelegate.swift */,
-				B7A3D2A52490C88A00CBD7B1 /* Publishers */,
+				B7A3D2A52490C88A00CBD7B1 /* PublishersAndExtantions */,
 				B71763C024864DA600B98A6C /* Manages */,
 				B71763BF24864D9D00B98A6C /* Model */,
 				B71763BE24864D7200B98A6C /* ViewModel */,
@@ -272,8 +286,9 @@
 				B752A6E32484F7F100513FCF /* Assets.xcassets */,
 				B752A6E82484F7F100513FCF /* LaunchScreen.storyboard */,
 				B752A6EB2484F7F100513FCF /* Info.plist */,
+				B700EB82249F6F4F00EA4332 /* GoogleService-Info.plist */,
 				B752A6E52484F7F100513FCF /* Preview Content */,
-				B71763B9248641BF00B98A6C /* GoogleService-Info.plist */,
+				B71763B9248641BF00B98A6C /* GoogleService-InfoOld.plist */,
 			);
 			path = testChat;
 			sourceTree = "<group>";
@@ -314,13 +329,14 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
-		B7A3D2A52490C88A00CBD7B1 /* Publishers */ = {
+		B7A3D2A52490C88A00CBD7B1 /* PublishersAndExtantions */ = {
 			isa = PBXGroup;
 			children = (
+				B700EB80249F69E000EA4332 /* String+Crypto.swift */,
 				B7A3D2AC2490DE5500CBD7B1 /* UIResponder+Current.swift */,
 				B7A3D2A62490C89A00CBD7B1 /* KeyboardHeightPublisher.swift */,
 			);
-			path = Publishers;
+			path = PublishersAndExtantions;
 			sourceTree = "<group>";
 		};
 		B7A3D2AE2490F18900CBD7B1 /* GroupView */ = {
@@ -389,6 +405,7 @@
 				B752A6D72484F7EF00513FCF /* Frameworks */,
 				B752A6D82484F7EF00513FCF /* Resources */,
 				1684EA6F874940A04D6C2B5C /* [CP] Embed Pods Frameworks */,
+				E31070BC192108EDF53F01A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -396,7 +413,8 @@
 			);
 			name = testChat;
 			packageProductDependencies = (
-				B723A6C0248E24E2008C7D8B /* SwiftPackageProductDependency */,
+				B723A6C0248E24E2008C7D8B /* TextView */,
+				B700EB8624A09BE100EA4332 /* URLImage */,
 			);
 			productName = testChat;
 			productReference = B752A6DA2484F7EF00513FCF /* Live Chat.app */;
@@ -430,6 +448,7 @@
 				B752A6F82484F7F100513FCF /* Frameworks */,
 				B752A6F92484F7F100513FCF /* Resources */,
 				6FEC88C1603EFC171C19EB0B /* [CP] Embed Pods Frameworks */,
+				6FB6EC397EB6C0459BB525D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,7 +493,8 @@
 			);
 			mainGroup = B752A6D12484F7EF00513FCF;
 			packageReferences = (
-				B723A6BF248E24E2008C7D8B /* RemoteSwiftPackageReference */,
+				B723A6BF248E24E2008C7D8B /* XCRemoteSwiftPackageReference "TextView" */,
+				B700EB8524A09BE100EA4332 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = B752A6DB2484F7EF00513FCF /* Products */;
 			projectDirPath = "";
@@ -493,7 +513,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B752A6EA2484F7F100513FCF /* LaunchScreen.storyboard in Resources */,
-				B71763BA248641BF00B98A6C /* GoogleService-Info.plist in Resources */,
+				B71763BA248641BF00B98A6C /* GoogleService-InfoOld.plist in Resources */,
+				B700EB83249F6F4F00EA4332 /* GoogleService-Info.plist in Resources */,
 				B752A6E72484F7F100513FCF /* Preview Assets.xcassets in Resources */,
 				B752A6E42484F7F100513FCF /* Assets.xcassets in Resources */,
 			);
@@ -555,6 +576,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6FB6EC397EB6C0459BB525D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testChat-testChatUITests/Pods-testChat-testChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6FEC88C1603EFC171C19EB0B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -592,6 +630,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E31070BC192108EDF53F01A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testChat/Pods-testChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testChat/Pods-testChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testChat/Pods-testChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8AA3B53B05552437E29AA95 /* [CP] Check Pods Manifest.lock */ = {
@@ -632,6 +687,7 @@
 				B7FD0C512497951500008BA6 /* TouchIDAuthentication.swift in Sources */,
 				B71763C224864DEE00B98A6C /* LoginVM.swift in Sources */,
 				B7A3D2AD2490DE5500CBD7B1 /* UIResponder+Current.swift in Sources */,
+				B700EB81249F69E000EA4332 /* String+Crypto.swift in Sources */,
 				B71763CA2486742000B98A6C /* ForgetPasswordView.swift in Sources */,
 				B723A6C5248ECA25008C7D8B /* GroupView.swift in Sources */,
 				B7EC4AC92487AE330035B496 /* User.swift in Sources */,
@@ -651,9 +707,11 @@
 				B7A3D2A02490B00900CBD7B1 /* MsgTail.swift in Sources */,
 				B7D3C65E24974AE300B974BB /* MeView.swift in Sources */,
 				B71763C624865C7100B98A6C /* CurrUserVM.swift in Sources */,
+				B700EB7F249F681B00EA4332 /* AppleLoginServise.swift in Sources */,
 				B71763BC24864C1100B98A6C /* HomeScreenView.swift in Sources */,
 				B7A3D2A22490B04100CBD7B1 /* RoundedShape.swift in Sources */,
 				B71763B82486402400B98A6C /* ErrorView.swift in Sources */,
+				B700EB7D249F63A600EA4332 /* GoogleLoginServise.swift in Sources */,
 				B7EC4ABD24878F640035B496 /*  FeedVM.swift in Sources */,
 				B7A3D2A42490B07C00CBD7B1 /* HomeCorenerShape.swift in Sources */,
 				B723A6C3248EB90B008C7D8B /* AllGroupsView.swift in Sources */,
@@ -827,9 +885,10 @@
 			baseConfigurationReference = 887CC1E8716DA181DA700106 /* Pods-testChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "testChat/Live Chat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"testChat/Preview Content\"";
-				DEVELOPMENT_TEAM = 69457SZR83;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = testChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -837,7 +896,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.israel.berezin.Smack.IBBreakpoint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftUIPlaykitChet.com;
 				PRODUCT_NAME = "Live Chat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -849,9 +908,10 @@
 			baseConfigurationReference = 09AF9843C6E1A773AB14BA8E /* Pods-testChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "testChat/Live Chat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"testChat/Preview Content\"";
-				DEVELOPMENT_TEAM = 69457SZR83;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = testChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -859,7 +919,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.israel.berezin.Smack.IBBreakpoint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftUIPlaykitChet.com;
 				PRODUCT_NAME = "Live Chat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -992,7 +1052,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B723A6BF248E24E2008C7D8B /* RemoteSwiftPackageReference */ = {
+		B700EB8524A09BE100EA4332 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.15;
+			};
+		};
+		B723A6BF248E24E2008C7D8B /* XCRemoteSwiftPackageReference "TextView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kenmueller/TextView";
 			requirement = {
@@ -1003,9 +1071,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B723A6C0248E24E2008C7D8B /* SwiftPackageProductDependency */ = {
+		B700EB8624A09BE100EA4332 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B723A6BF248E24E2008C7D8B /* RemoteSwiftPackageReference */;
+			package = B700EB8524A09BE100EA4332 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		B723A6C0248E24E2008C7D8B /* TextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B723A6BF248E24E2008C7D8B /* XCRemoteSwiftPackageReference "TextView" */;
 			productName = TextView;
 		};
 /* End XCSwiftPackageProductDependency section */

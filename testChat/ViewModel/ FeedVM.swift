@@ -91,7 +91,12 @@ class FeedVM: ObservableObject {
         self.refHandle = DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllGroups { (returnedGroupsArray) in
 //                print(returnedGroupsArray)
-                self.groupsArray = returnedGroupsArray
+                if returnedGroupsArray.count == 0{
+                     let group = Group(title: "", description: "", key: "000", members: [], memberCount: 0)
+                    self.groupsArray = [group]
+                }else{
+                    self.groupsArray = returnedGroupsArray
+                }
             }
         }
         
@@ -126,7 +131,7 @@ class FeedVM: ObservableObject {
     }
     
     
-    func createUsersArray(usersFromDB users: [UserNameAndImage]) -> [User]{
+    func createUsersArray(usersFromDB users: [FullDBUser]) -> [User]{
         var temp = [User]()
         for user in users{
             let image = #imageLiteral(resourceName: "defaultProfileImage")
@@ -139,7 +144,8 @@ class FeedVM: ObservableObject {
                 decodedimage1 = Image(uiImage: decodedimage)
                 
             }
-            let newUser = User(name: user.name, image: decodedimage, image1: decodedimage1, senderId: user.key)
+            
+            let newUser = User(name: user.name, image: decodedimage, image1: decodedimage1, userImageUrl: user.userImageUrl, senderId: user.key)
             temp.append(newUser)
         }
 //        print(temp)
@@ -190,22 +196,28 @@ class FeedVM: ObservableObject {
         weak var weakMsg:Message? = message
         
         
-        DataService.instance.getUser(forUID: weakMsg!.senderId) { (username, imageUserBase64EncodedString) in
+        DataService.instance.getUser(forUID: weakMsg!.senderId) { fullDBUser in
+            
+            if let fullDBUser = fullDBUser {
             let image = #imageLiteral(resourceName: "defaultProfileImage")
             var decodedimage = image
             var decodedimage1:Image = Image("defaultProfileImage")
             
-            if imageUserBase64EncodedString != nil{
-                let dataDecoded : Data = Data(base64Encoded: imageUserBase64EncodedString!, options: .ignoreUnknownCharacters)!
+            if fullDBUser.userImage != nil{
+                let dataDecoded : Data = Data(base64Encoded: fullDBUser.userImage!, options: .ignoreUnknownCharacters)!
                 decodedimage = UIImage(data: dataDecoded)!
                 decodedimage1 = Image(uiImage: decodedimage)
                 
             }
-            let user = User(name: username, image: decodedimage, image1: decodedimage1, senderId: weakMsg!.senderId)
+            let user = User(name: fullDBUser.name, image: decodedimage, image1: decodedimage1, userImageUrl: fullDBUser.userImageUrl, senderId: weakMsg!.senderId)
             print(user.name)
             print(weakMsg!.senderId)
             
             completion(user, weakMsg!)
+            }else{
+                completion(nil, weakMsg!)
+
+            }
             
         }
     }
@@ -216,7 +228,7 @@ class FeedVM: ObservableObject {
         let image = #imageLiteral(resourceName: "defaultProfileImage")
 
         for index in 0...num {
-            let user = User(name: "", image: image, image1: decodedimage1, senderId: "String", isLoad: false)
+            let user = User(name: "", image: image, image1: decodedimage1, userImageUrl: nil, senderId: "String", isLoad: false)
             usersArray.append(user)
             
         }

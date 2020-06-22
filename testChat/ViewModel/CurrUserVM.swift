@@ -23,20 +23,21 @@ class CurrUserVM: ObservableObject {
     init(){
        
         if Auth.auth().currentUser != nil {
-            DataService.instance.getUser(forUID: Auth.auth().currentUser!.uid) { (username, imageUserBase64EncodedString) in
-                if Auth.auth().currentUser != nil{
+            DataService.instance.getUser(forUID: Auth.auth().currentUser!.uid) { fullDBUser in
+                if Auth.auth().currentUser != nil, let fullDBUser = fullDBUser{
                     let image = #imageLiteral(resourceName: "defaultProfileImage")
                     var decodedimage = image
                     var decodedimage1:Image = Image("defaultProfileImage")
                     
-                    if imageUserBase64EncodedString != nil{
-                        let dataDecoded : Data = Data(base64Encoded: imageUserBase64EncodedString!, options: .ignoreUnknownCharacters)!
+                    if fullDBUser.userImage != nil{
+                        let dataDecoded : Data = Data(base64Encoded: fullDBUser.userImage!, options: .ignoreUnknownCharacters)!
                         decodedimage = UIImage(data: dataDecoded)!
                         decodedimage1 = Image(uiImage: decodedimage)
                         
                     }
+                    self.fullUser = User(name: fullDBUser.name, image: decodedimage, image1: decodedimage1, userImageUrl: fullDBUser.userImageUrl, senderId: Auth.auth().currentUser!.uid)
 
-                    self.fullUser = User(name: username, image: decodedimage, image1: decodedimage1, senderId:  Auth.auth().currentUser!.uid)
+//                    self.fullUser = User(name: username, image: decodedimage, image1: decodedimage1, senderId:  Auth.auth().currentUser!.uid)
                     self.user = Auth.auth().currentUser
                 }else{
                     self.userLogout()
@@ -84,6 +85,17 @@ class CurrUserVM: ObservableObject {
         return nil
     }
     
+    var userImageUrl: URL?{
+        if self.user != nil && self.fullUser.userImageUrl != nil{
+            print("self.fullUser.userImageUrl!")
+            return URL(string: self.fullUser.userImageUrl!) //self.fullUser.userImageUrl
+
+        }
+        return nil
+
+    }
+
+
     
     func isMyUser(user testUser: User) -> Bool{
         var isUser = false
