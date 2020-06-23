@@ -15,6 +15,8 @@
 		B700EB81249F69E000EA4332 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700EB80249F69E000EA4332 /* String+Crypto.swift */; };
 		B700EB83249F6F4F00EA4332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B700EB82249F6F4F00EA4332 /* GoogleService-Info.plist */; };
 		B700EB8724A09BE100EA4332 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = B700EB8624A09BE100EA4332 /* URLImage */; };
+		B700EB8924A0CAB400EA4332 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700EB8824A0CAB400EA4332 /* CaptureImageView.swift */; };
+		B700EB8B24A0CCB100EA4332 /* UIimage+compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700EB8A24A0CCB100EA4332 /* UIimage+compress.swift */; };
 		B71763B4248639C100B98A6C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763B3248639C100B98A6C /* LoginView.swift */; };
 		B71763B624863A0300B98A6C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763B524863A0300B98A6C /* RegisterView.swift */; };
 		B71763B82486402400B98A6C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71763B72486402400B98A6C /* ErrorView.swift */; };
@@ -95,6 +97,8 @@
 		B700EB80249F69E000EA4332 /* String+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
 		B700EB82249F6F4F00EA4332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B700EB84249F702800EA4332 /* Live Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Live Chat.entitlements"; sourceTree = "<group>"; };
+		B700EB8824A0CAB400EA4332 /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
+		B700EB8A24A0CCB100EA4332 /* UIimage+compress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+compress.swift"; sourceTree = "<group>"; };
 		B71763B3248639C100B98A6C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B71763B524863A0300B98A6C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B71763B72486402400B98A6C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -236,7 +240,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B71763C024864DA600B98A6C /* Manages */ = {
+		B71763C024864DA600B98A6C /* ManagesAndServices */ = {
 			isa = PBXGroup;
 			children = (
 				B7FD0C522497966C00008BA6 /* KeychainHelper.swift */,
@@ -247,7 +251,7 @@
 				B700EB7C249F63A600EA4332 /* GoogleLoginServise.swift */,
 				B700EB7E249F681B00EA4332 /* AppleLoginServise.swift */,
 			);
-			path = Manages;
+			path = ManagesAndServices;
 			sourceTree = "<group>";
 		};
 		B752A6D12484F7EF00513FCF = {
@@ -279,7 +283,7 @@
 				B752A6DD2484F7EF00513FCF /* AppDelegate.swift */,
 				B752A6DF2484F7EF00513FCF /* SceneDelegate.swift */,
 				B7A3D2A52490C88A00CBD7B1 /* PublishersAndExtantions */,
-				B71763C024864DA600B98A6C /* Manages */,
+				B71763C024864DA600B98A6C /* ManagesAndServices */,
 				B71763BF24864D9D00B98A6C /* Model */,
 				B71763BE24864D7200B98A6C /* ViewModel */,
 				B71763BD24864D4F00B98A6C /* Views */,
@@ -335,6 +339,7 @@
 				B700EB80249F69E000EA4332 /* String+Crypto.swift */,
 				B7A3D2AC2490DE5500CBD7B1 /* UIResponder+Current.swift */,
 				B7A3D2A62490C89A00CBD7B1 /* KeyboardHeightPublisher.swift */,
+				B700EB8A24A0CCB100EA4332 /* UIimage+compress.swift */,
 			);
 			path = PublishersAndExtantions;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				B7D3C65B24962E2800B974BB /* ListScrollManagerView.swift */,
+				B700EB8824A0CAB400EA4332 /* CaptureImageView.swift */,
 			);
 			path = RepresentableViews;
 			sourceTree = "<group>";
@@ -692,8 +698,10 @@
 				B723A6C5248ECA25008C7D8B /* GroupView.swift in Sources */,
 				B7EC4AC92487AE330035B496 /* User.swift in Sources */,
 				B7D3C65C24962E2800B974BB /* ListScrollManagerView.swift in Sources */,
+				B700EB8924A0CAB400EA4332 /* CaptureImageView.swift in Sources */,
 				B752A7122484F9BC00513FCF /* MainLoginView.swift in Sources */,
 				B752A7102484F98700513FCF /* SettingsView.swift in Sources */,
+				B700EB8B24A0CCB100EA4332 /* UIimage+compress.swift in Sources */,
 				B752A6DE2484F7EF00513FCF /* AppDelegate.swift in Sources */,
 				B7A3D2B02490F1EB00CBD7B1 /* TopGroupView.swift in Sources */,
 				B7D3C6572492628400B974BB /* AddNewGruopView.swift in Sources */,

@@ -44,6 +44,13 @@ class Message : Identifiable{
         return _myMsg
     }
     
+    var adminMsg:Bool{
+        if self._msgId == "000"{
+            return true
+        }
+        return false
+    }
+
     init (content: String, senderId: String, msgId:String ){
         self._content = content
         self._senderId = senderId

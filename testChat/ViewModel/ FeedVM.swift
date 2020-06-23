@@ -124,7 +124,13 @@ class FeedVM: ObservableObject {
         
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllMessagesFor(desiredGroup: group){ returnedGroupMessages in
-                self.messageArray = returnedGroupMessages
+                
+                if returnedGroupMessages.count > 0{
+                    self.messageArray = returnedGroupMessages
+                }else{
+                    let msg = Message(content: "hey! no mssages yet in this chat,\nplease start chat", senderId: "Chat Admin", msgId: "000")
+                    self.messageArray = [msg]
+                }
                 self.updateGView.toggle()
             }
         }
@@ -227,13 +233,26 @@ class FeedVM: ObservableObject {
         let decodedimage1: Image = Image("defaultProfileImage")
         let image = #imageLiteral(resourceName: "defaultProfileImage")
 
-        for index in 0...num {
+        for _ in 0...num {
             let user = User(name: "", image: image, image1: decodedimage1, userImageUrl: nil, senderId: "String", isLoad: false)
             usersArray.append(user)
             
         }
         return usersArray
-       // self.groupUsersArray = usersArray
+    }
+    
+    
+    func createGroup(withTitle title: String, andDescription description: String, forUserEmails emails: [String], handler: @escaping (_ groupCreated: Bool) -> ()) {
+        
+        DataService.instance.getIds(forUsernames: emails){ idsArray in
+            var userIds = idsArray
+            userIds.append((Auth.auth().currentUser?.uid)!)
+
+            DataService.instance.createGroup(withTitle: title, andDescription: description, forUserIds: idsArray) { (status) in
+                print("groupCreated = \(status)")
+                handler(status)
+            }
+        }
     }
 }
 

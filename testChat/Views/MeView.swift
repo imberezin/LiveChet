@@ -19,6 +19,10 @@ struct MeView: View {
 
     private let biometricIDAuth = BiometricIDAuth()
 
+    @State var image: Image? = nil
+    
+    @State var showCaptureImageView: Bool = false
+
     var body: some View {
         ZStack (alignment: .center){
         VStack(alignment: .center)
@@ -49,9 +53,7 @@ struct MeView: View {
                     .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)) , radius: 4, x: 4, y: 4)
                 
                 GeometryReader{ geometry in
-                    
-                        
-                        
+
                     VStack(alignment: .center, spacing: 25){
                         if self.currUserVM.userImageUrl != nil{
                             
@@ -70,15 +72,27 @@ struct MeView: View {
                         } else {
                             Button(action: {
                                 print("Update User Image")
+                                self.showCaptureImageView.toggle()
                             }) {
-                                self.currUserVM.userImage
+                                if self.image != nil{
+                                    self.image!
                                     .renderingMode(.original)
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 120, height: 120)
                                     .clipShape(Circle())
                                     .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+
+                                }else{
+                                    self.currUserVM.userImage
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 120, height: 120)
+                                        .clipShape(Circle())
+                                        .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
+                                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                                }
                             }.padding(.bottom, 25)
                         }
 
@@ -158,12 +172,22 @@ struct MeView: View {
                 
                 Spacer()
             }
+        // xcode 12...
+//        .onChange(of: image) { [self.image] newImage in
+//                print("image update")
+//            }
+
+            
             if self.showLogoutView{
                 ErrorView(bodyText: "Are you sure?", messageViewType: .logout, action: {
                     self.loginVM.logout()
                 }) {
                     self.showLogoutView.toggle()
                 }
+            }
+
+            if (showCaptureImageView) {
+              CaptureImageView(isShown: $showCaptureImageView, image: $image)
             }
 
         }

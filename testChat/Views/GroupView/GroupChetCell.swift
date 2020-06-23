@@ -32,7 +32,7 @@ struct GroupChetCell: View {
                     else{
                         
                         VStack(alignment: .leading, spacing: 5.0) {
-                            Text(self.user.name)
+                            Text(data.adminMsg ? data.senderId : self.user.name)
                                 .font(.footnote)
                                 .foregroundColor(Color.gray)
                             Text(data.content)

@@ -14,7 +14,7 @@ struct AllGroupsView: View {
     @ObservedObject var feedVM = FeedVM()
     
     @State var showingDetail: Bool = false
-
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -45,8 +45,8 @@ struct AllGroupsView: View {
                     }.background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).opacity(0.5))
                         .clipShape(Circle())
                         .offset(y:-20)
-                    .sheet(isPresented: $showingDetail) {
-                        AddNewGruopView(feedVM: self.feedVM)
+                        .sheet(isPresented: $showingDetail) {
+                            AddNewGruopView(feedVM: self.feedVM)
                     }
                     
                 }.frame(height: 120)
@@ -56,7 +56,7 @@ struct AllGroupsView: View {
                     //                    .padding(.top, 20)
                     .background(bgViewLinearGradient)
                     .clipShape(HomeCorenerShape())
-
+                
                 
                 if feedVM.groupsArray.count > 0 {
                     
@@ -70,24 +70,24 @@ struct AllGroupsView: View {
                                         .fontWeight(.bold)
                                         .multilineTextAlignment(.center)
                                     
-                                    Text("Tap on ➕ to create youe group")
+                                    Text("Tap on ➕ to create your's groups")
                                         .font(.headline)
                                         .fontWeight(.bold)
                                         .multilineTextAlignment(.center)
-
+                                    
                                     
                                 }
                                 
                                 Spacer(minLength: 0)
                                 
                             }.padding(.vertical)
-
+                            
                         } else{
                             NavigationLink(destination: GroupView(selectedGroup: group)){
                                 HStack(alignment: .top, spacing: 12){
-    //                                if self.feedVM.updateView{
-    //                                    EmptyView()
-    //                                }
+                                    //                                if self.feedVM.updateView{
+                                    //                                    EmptyView()
+                                    //                                }
                                     VStack(alignment: .leading, spacing: 12) {
                                         
                                         Text(group.groupTitle.uppercased())
@@ -106,8 +106,8 @@ struct AllGroupsView: View {
                             }
                         }
                     }.padding(.top,16)
-                    .onAppear {
-                        UITableView.appearance().separatorStyle = .none
+                        .onAppear {
+                            UITableView.appearance().separatorStyle = .none
                     }
                     .onDisappear {
                         UITableView.appearance().separatorStyle = .singleLine
@@ -116,7 +116,7 @@ struct AllGroupsView: View {
                     List{
                         
                         ForEach(0 ..< 6 ,id: \.self){_ in
-
+                            
                             AllGroupsCellShimmer()
                             
                         }
@@ -127,16 +127,15 @@ struct AllGroupsView: View {
             }.onAppear{
                 self.feedVM.loadAllGroups()
             }.onDisappear{
-                self.feedVM.removeAllGroupsObserver()
+                if self.showingDetail == false {
+                    self.feedVM.removeAllGroupsObserver()
+                }
             }
                 
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.top)
             
         }
-        //        .navigationBarHidden(true)
-        //       // .navigationBarTitle(Text("Home"))
-        //        .edgesIgnoringSafeArea([.top, .bottom])
     }
 }
 

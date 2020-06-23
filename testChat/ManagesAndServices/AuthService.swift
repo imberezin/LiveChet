@@ -20,7 +20,12 @@ class AuthService {
                 return;
             }
             
-            let userData = ["provider": currUser.providerID, "email": currUser.email]
+            var userData = ["provider": currUser.providerID, "email": currUser.email]
+
+            if let provider = currUser.providerData.first?.providerID{
+                userData = ["provider": provider, "email": currUser.email]
+
+            }
             DataService.instance.createDBUser(uid: currUser.uid, userData: userData as Dictionary<String, Any>)
             userCreationComplete(true, nil)
         }
