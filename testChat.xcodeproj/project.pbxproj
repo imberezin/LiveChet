@@ -47,6 +47,12 @@
 		B7A3D2B02490F1EB00CBD7B1 /* TopGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A3D2AF2490F1EB00CBD7B1 /* TopGroupView.swift */; };
 		B7A3D2B22490F30B00CBD7B1 /* GroupChetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A3D2B12490F30B00CBD7B1 /* GroupChetCell.swift */; };
 		B7A3D2B42490FC4800CBD7B1 /* TextShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A3D2B32490FC4800CBD7B1 /* TextShimmer.swift */; };
+		B7CFFA1E24A48DEC00011097 /* SettingsUsersPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFFA1D24A48DEC00011097 /* SettingsUsersPickerView.swift */; };
+		B7CFFA2024A4A0CE00011097 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFFA1F24A4A0CE00011097 /* test.swift */; };
+		B7CFFA2224A4A98000011097 /* AddNewGroupFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFFA2124A4A98000011097 /* AddNewGroupFormView.swift */; };
+		B7CFFA2B24A4CB2E00011097 /* BackgroundNeumorphicWhiteBlackStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFFA2A24A4CB2E00011097 /* BackgroundNeumorphicWhiteBlackStyle.swift */; };
+		B7CFFA2E24A4D0A900011097 /* StaticNeumorphicWhiteBlackViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFFA2D24A4D0A900011097 /* StaticNeumorphicWhiteBlackViewModifier.swift */; };
+		B7CFFA3124A4D39600011097 /* MeOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CFFA3024A4D39600011097 /* MeOrView.swift */; };
 		B7D3C655249240BD00B974BB /* UserShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3C654249240BD00B974BB /* UserShimmer.swift */; };
 		B7D3C6572492628400B974BB /* AddNewGruopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3C6562492628400B974BB /* AddNewGruopView.swift */; };
 		B7D3C6592496166500B974BB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3C6582496166500B974BB /* AuthService.swift */; };
@@ -134,6 +140,12 @@
 		B7A3D2AF2490F1EB00CBD7B1 /* TopGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGroupView.swift; sourceTree = "<group>"; };
 		B7A3D2B12490F30B00CBD7B1 /* GroupChetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChetCell.swift; sourceTree = "<group>"; };
 		B7A3D2B32490FC4800CBD7B1 /* TextShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShimmer.swift; sourceTree = "<group>"; };
+		B7CFFA1D24A48DEC00011097 /* SettingsUsersPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUsersPickerView.swift; sourceTree = "<group>"; };
+		B7CFFA1F24A4A0CE00011097 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		B7CFFA2124A4A98000011097 /* AddNewGroupFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupFormView.swift; sourceTree = "<group>"; };
+		B7CFFA2A24A4CB2E00011097 /* BackgroundNeumorphicWhiteBlackStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNeumorphicWhiteBlackStyle.swift; sourceTree = "<group>"; };
+		B7CFFA2D24A4D0A900011097 /* StaticNeumorphicWhiteBlackViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticNeumorphicWhiteBlackViewModifier.swift; sourceTree = "<group>"; };
+		B7CFFA3024A4D39600011097 /* MeOrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeOrView.swift; sourceTree = "<group>"; };
 		B7D3C654249240BD00B974BB /* UserShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShimmer.swift; sourceTree = "<group>"; };
 		B7D3C6562492628400B974BB /* AddNewGruopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGruopView.swift; sourceTree = "<group>"; };
 		B7D3C6582496166500B974BB /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -198,7 +210,6 @@
 				B752A7112484F9BC00513FCF /* MainLoginView.swift */,
 				B71763B3248639C100B98A6C /* LoginView.swift */,
 				B71763B524863A0300B98A6C /* RegisterView.swift */,
-				B71763B72486402400B98A6C /* ErrorView.swift */,
 				B71763C92486742000B98A6C /* ForgetPasswordView.swift */,
 			);
 			path = LoginViews;
@@ -207,14 +218,18 @@
 		B71763BD24864D4F00B98A6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7CFFA2C24A4D08300011097 /* ViewsModifier */,
+				B7CFFA2924A4CB1400011097 /* ButtonsStyle */,
 				B752A6E12484F7EF00513FCF /* ContentView.swift */,
-				B7D3C65D24974AE300B974BB /* MeView.swift */,
-				B752A70F2484F98700513FCF /* SettingsView.swift */,
+				B7CFFA2F24A4D37B00011097 /* MeView */,
+				B71763B72486402400B98A6C /* ErrorView.swift */,
+				B7CFFA1C24A48B8700011097 /* AllGroupView */,
 				B7A3D2AE2490F18900CBD7B1 /* GroupView */,
 				B7EC4ACC2488DDDA0035B496 /*  HomeViews */,
 				B71763B22486395800B98A6C /* LoginViews */,
 				B7D3C6532491FE9E00B974BB /* ShimmerViews */,
 				B7A3D29E2490AFD300CBD7B1 /* Shapes */,
+				B7CFFA1F24A4A0CE00011097 /* test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,10 +365,45 @@
 				B723A6C4248ECA25008C7D8B /* GroupView.swift */,
 				B7A3D2AF2490F1EB00CBD7B1 /* TopGroupView.swift */,
 				B7A3D2B12490F30B00CBD7B1 /* GroupChetCell.swift */,
-				B723A6C2248EB90B008C7D8B /* AllGroupsView.swift */,
-				B7D3C6562492628400B974BB /* AddNewGruopView.swift */,
 			);
 			path = GroupView;
+			sourceTree = "<group>";
+		};
+		B7CFFA1C24A48B8700011097 /* AllGroupView */ = {
+			isa = PBXGroup;
+			children = (
+				B723A6C2248EB90B008C7D8B /* AllGroupsView.swift */,
+				B7D3C6562492628400B974BB /* AddNewGruopView.swift */,
+				B7CFFA2124A4A98000011097 /* AddNewGroupFormView.swift */,
+				B7CFFA1D24A48DEC00011097 /* SettingsUsersPickerView.swift */,
+			);
+			path = AllGroupView;
+			sourceTree = "<group>";
+		};
+		B7CFFA2924A4CB1400011097 /* ButtonsStyle */ = {
+			isa = PBXGroup;
+			children = (
+				B7CFFA2A24A4CB2E00011097 /* BackgroundNeumorphicWhiteBlackStyle.swift */,
+			);
+			path = ButtonsStyle;
+			sourceTree = "<group>";
+		};
+		B7CFFA2C24A4D08300011097 /* ViewsModifier */ = {
+			isa = PBXGroup;
+			children = (
+				B7CFFA2D24A4D0A900011097 /* StaticNeumorphicWhiteBlackViewModifier.swift */,
+			);
+			path = ViewsModifier;
+			sourceTree = "<group>";
+		};
+		B7CFFA2F24A4D37B00011097 /* MeView */ = {
+			isa = PBXGroup;
+			children = (
+				B7D3C65D24974AE300B974BB /* MeView.swift */,
+				B7CFFA3024A4D39600011097 /* MeOrView.swift */,
+				B752A70F2484F98700513FCF /* SettingsView.swift */,
+			);
+			path = MeView;
 			sourceTree = "<group>";
 		};
 		B7D3C6532491FE9E00B974BB /* ShimmerViews */ = {
@@ -689,8 +739,11 @@
 				B71763B624863A0300B98A6C /* RegisterView.swift in Sources */,
 				B7EC4ACA2487AE330035B496 /* Group.swift in Sources */,
 				B7EC4AB724878DF10035B496 /* DataService.swift in Sources */,
+				B7CFFA1E24A48DEC00011097 /* SettingsUsersPickerView.swift in Sources */,
 				B7EC4ACB2487AE330035B496 /* Message.swift in Sources */,
+				B7CFFA2024A4A0CE00011097 /* test.swift in Sources */,
 				B7FD0C512497951500008BA6 /* TouchIDAuthentication.swift in Sources */,
+				B7CFFA2E24A4D0A900011097 /* StaticNeumorphicWhiteBlackViewModifier.swift in Sources */,
 				B71763C224864DEE00B98A6C /* LoginVM.swift in Sources */,
 				B7A3D2AD2490DE5500CBD7B1 /* UIResponder+Current.swift in Sources */,
 				B700EB81249F69E000EA4332 /* String+Crypto.swift in Sources */,
@@ -708,6 +761,7 @@
 				B7EC4ACE2488DDFC0035B496 /* HomeTopView.swift in Sources */,
 				B7A3D2B42490FC4800CBD7B1 /* TextShimmer.swift in Sources */,
 				B7EC4AD22488E0080035B496 /* AddNewComment.swift in Sources */,
+				B7CFFA3124A4D39600011097 /* MeOrView.swift in Sources */,
 				B752A70E2484F87300513FCF /* MainView.swift in Sources */,
 				B752A6E02484F7EF00513FCF /* SceneDelegate.swift in Sources */,
 				B7FD0C542497966D00008BA6 /* KeychainHelper.swift in Sources */,
@@ -719,6 +773,8 @@
 				B71763BC24864C1100B98A6C /* HomeScreenView.swift in Sources */,
 				B7A3D2A22490B04100CBD7B1 /* RoundedShape.swift in Sources */,
 				B71763B82486402400B98A6C /* ErrorView.swift in Sources */,
+				B7CFFA2B24A4CB2E00011097 /* BackgroundNeumorphicWhiteBlackStyle.swift in Sources */,
+				B7CFFA2224A4A98000011097 /* AddNewGroupFormView.swift in Sources */,
 				B700EB7D249F63A600EA4332 /* GoogleLoginServise.swift in Sources */,
 				B7EC4ABD24878F640035B496 /*  FeedVM.swift in Sources */,
 				B7A3D2A42490B07C00CBD7B1 /* HomeCorenerShape.swift in Sources */,

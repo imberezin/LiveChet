@@ -93,7 +93,7 @@ struct ErrorView: View {
     func titleText() ->String{
         switch self.messageViewType {
         case .error:
-            return "Cancel"
+            return "Error"
         case .resetPasswford:
             return "Message"
         case .logout:
@@ -104,7 +104,7 @@ struct ErrorView: View {
     func buttonText() ->String{
         switch self.messageViewType {
         case .error:
-            return "Error"
+            return "Ok"
         case .resetPasswford:
             return "Message"
 
