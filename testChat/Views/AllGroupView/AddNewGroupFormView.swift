@@ -55,7 +55,7 @@ struct AddNewGroupFormView: View {
                     HStack(alignment: .center) {
                         Spacer()
                         Text("You han't added any member to your group yet\nTap on ➕ to add memberes")
-                            .font(.headline)
+                            .font(.subheadline)
                             .fontWeight(.light)
                             .multilineTextAlignment(.center)
                             .lineLimit(nil)

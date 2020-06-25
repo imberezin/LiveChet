@@ -64,8 +64,8 @@ struct AddNewGruopView: View {
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
                             }
-                            .padding(.horizontal,24)
-                            .padding(.vertical,16)
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 16)
                             .background(bgButtonVLinaerGradient)
                             .cornerRadius(8)
                             .padding()

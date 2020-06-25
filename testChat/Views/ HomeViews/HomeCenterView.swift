@@ -24,9 +24,7 @@ struct HomeCenterView: View {
                             EmptyView()
                         }
                         self.feedVM.getMessageUser(message: message).image1
-                            .resizable()
-                            .frame(width: 55, height: 55)
-                            .clipShape(Circle())
+                            .staticCircelImageViewModifier(imageSize: CGSize(width: 55, height: 55), shadowRadius: 1, shadowSize: 1)
                         
                         VStack(alignment: .leading, spacing: 12) {
                             
@@ -42,9 +40,6 @@ struct HomeCenterView: View {
                     
                     
                 }
-//                .padding(.top, 20)
-//                    .background(Color.white)
-//                    .clipShape(HomeCorenerShape())
             }else{
                 List{
                     ForEach(0..<6 ,id: \.self){_ in
@@ -53,9 +48,6 @@ struct HomeCenterView: View {
                         
                     }
                 }
-//                .padding(.top, 20)
-//                    .background(Color.white)
-//                    .clipShape(HomeCorenerShape())
             }
         }.padding(.top, 10)
             .background(Rectangle().fill(Color.white))

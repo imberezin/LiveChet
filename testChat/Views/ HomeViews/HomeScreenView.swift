@@ -22,7 +22,7 @@ struct HomeScreenView: View {
     var body: some View{
         ZStack{
             VStack{
-                HomeTopView(expand: self.$expand, showLogoutView: self.$showLogoutView, currUserVM: self.currUserVM, feedVM: self.feedVM)
+                HomeTopView(currUserVM: self.currUserVM, feedVM: self.feedVM, expand: self.$expand, showLogoutView: self.$showLogoutView)
                     .frame(height: 120)
                     .padding()
                     .padding(.top, 20)

@@ -20,8 +20,6 @@ struct AddNewComment: View {
 
     var body: some View {
         ZStack{
-//            bgViewLinearGradient.edgesIgnoringSafeArea(.all)
-            
             
             VStack(alignment: .leading) {
                 
@@ -43,13 +41,8 @@ struct AddNewComment: View {
                     
                 HStack(spacing: 15){
                     self.currUserVM.userImage
-                    .renderingMode(.original)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 60, height: 60)
-                    .clipShape(Circle())
+                        .staticCircelImageViewModifier(imageSize: CGSize(width: 60, height: 60), shadowRadius: 1, shadowSize: 1)
 
-                    
                     Text(self.currUserVM.userName)
                     Spacer()
                 }.padding(.leading)
@@ -61,7 +54,7 @@ struct AddNewComment: View {
                     placeholder: "Enter text here"
                 ).frame(minHeight: 30, maxHeight: 120, alignment: .top).foregroundColor(Color.primary)
                     .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).padding()
-                    //.padding(.top,24)
+
                 HStack{
                     Spacer()
                     Button(action: {
@@ -82,7 +75,6 @@ struct AddNewComment: View {
             }.onTapGesture {
                 self.dissmisKeyborad()
             }
-            //.padding()
         }.onAppear(){
             
         }

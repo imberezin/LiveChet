@@ -11,23 +11,20 @@ import URLImage
 
 struct HomeTopView: View {
     
-    @State var search = ""
-    @State var showingDetail: Bool = false
-    @Binding var expand : Bool
-    @Binding var showLogoutView: Bool
     @ObservedObject var currUserVM :CurrUserVM
     @ObservedObject var feedVM: FeedVM
 
-    var bgViewLinearGradient : LinearGradient{
-        return  LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
+    @State var search = ""
+    @State var showingDetail: Bool = false
     
+    @Binding var expand : Bool
+    @Binding var showLogoutView: Bool
     
     var body : some View{
         
-        VStack(spacing: 16){
+        VStack(spacing: 16) {
             
-            if self.expand{
+            if self.expand {
                 
                 HStack{
                     HStack (alignment: .center){
@@ -39,20 +36,11 @@ struct HomeTopView: View {
                                     
                                     URLImage(self.currUserVM.userImageUrl!) { proxy in
                                         proxy.image
-                                            .renderingMode(.original)
-                                            .resizable()                     // Make image resizable
-                                            .aspectRatio(contentMode: .fill) // Fill the frame
-                                            .clipShape(Circle())
+                                            .staticCircelImageViewModifier(imageSize: CGSize(width: 30, height: 30), shadowRadius: 1, shadowSize: 1)
                                     }
-                                    .frame(width: 30, height: 30)  // Set frame to 100x100.
-
                                 }else{
                                     self.currUserVM.userImage
-                                        .renderingMode(.original)
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 30, height: 30)
-                                        .clipShape(Circle())
+                                        .staticCircelImageViewModifier(imageSize: CGSize(width: 30, height: 30), shadowRadius: 1, shadowSize: 1)
                                 }
                             }
                         }
@@ -100,6 +88,8 @@ struct HomeTopView: View {
 
 struct HomeTopView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTopView(expand: .constant(true), showLogoutView: .constant(false), currUserVM: CurrUserVM(), feedVM: FeedVM())
+        HomeTopView(currUserVM: CurrUserVM(), feedVM: FeedVM(), expand: .constant(false), showLogoutView: .constant(false))
     }
 }
+//         HomeTopView(expand: .constant(true), showLogoutView: .constant(false), currUserVM: CurrUserVM(), feedVM: FeedVM())
+
