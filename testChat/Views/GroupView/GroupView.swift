@@ -102,14 +102,7 @@ struct GroupView: View {
                                 
                                 withAnimation{
 
-                                    let safeAreaInsetsBottom = geometry.safeAreaInsets.bottom  == 0 ? 28 : geometry.safeAreaInsets.bottom
-                                    let keyboardTop = geometry.frame(in: .local).height - keyboardHeight
-                                    let focusedTextInputBottom = UIResponder.currentFirstResponder?.globalFrame?.maxY ?? 0
-                                    let bottomPadding = max(0, focusedTextInputBottom - keyboardTop - safeAreaInsetsBottom)
-                                    self.height = bottomPadding
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        self.indexPathToSetVisible = IndexPath(row: self.feedVM.messageArray.count - 1, section: 0)
-                                    }
+                                    self.updateScreenBykeyboardHeight(keyboardHeight: keyboardHeight, geometry: geometry)
 
                                 }
                             }
@@ -127,6 +120,23 @@ struct GroupView: View {
                 self.feedVM.loadGroupData(group: self.selectedGroup)
             }
         }.edgesIgnoringSafeArea(.top)
+    }
+    
+    
+    func updateScreenBykeyboardHeight(keyboardHeight: CGFloat, geometry: GeometryProxy){
+        
+        withAnimation{
+
+            let safeAreaInsetsBottom = geometry.safeAreaInsets.bottom  == 0 ? 28 : geometry.safeAreaInsets.bottom
+            let keyboardTop = geometry.frame(in: .local).height - keyboardHeight
+            let focusedTextInputBottom = UIResponder.currentFirstResponder?.globalFrame?.maxY ?? 0
+            let bottomPadding = max(0, focusedTextInputBottom - keyboardTop - safeAreaInsetsBottom)
+            self.height = bottomPadding
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.indexPathToSetVisible = IndexPath(row: self.feedVM.messageArray.count - 1, section: 0)
+            }
+
+        }
     }
     
     func dissmisKeyborad(){

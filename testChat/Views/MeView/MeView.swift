@@ -29,28 +29,7 @@ struct MeView: View {
             VStack(alignment: .center)
             {
                 
-                HStack(spacing: 15){
-                    Spacer()
-                    VStack(spacing: 15){
-                        Text("Me")
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.center)
-                        Text(self.currUserVM.email)
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.center)
-                        
-                    }
-                    Spacer()
-                    
-                }.frame(height: 100)
-                    .padding()
-                    .padding(.top, 20)
-                    .background(bgViewLinearGradient)
-                    .clipShape(HomeCorenerShape())
+                SimpleTopView(firstRow: "Me", secRow: self.currUserVM.email)
                     .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)) , radius: 4, x: 4, y: 4)
                 
                 GeometryReader{ geometry in

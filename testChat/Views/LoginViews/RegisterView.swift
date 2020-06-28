@@ -18,9 +18,6 @@ struct RegisterView: View {
     @State var visiblePass = false
     @State var visibleRePass = false
 
-//    @Binding var alert: Bool
-//    @Binding var error: String
-
     @ObservedObject var loginVM: LoginVM
 
     var body : some View{
@@ -74,9 +71,11 @@ struct RegisterView: View {
                         .frame(width: 15, height: 18)
                         .foregroundColor(.black)
                     if self.visibleRePass{
-                        TextField("Re-Enter", text: self.$repass)                                .font(.headline)
+                        TextField("Re-Enter", text: self.$repass)
+                            .font(.headline)
                     }else{
-                        SecureField("Re-Enter", text: self.$repass)                                .font(.headline)
+                        SecureField("Re-Enter", text: self.$repass)
+                            .font(.headline)
                     }
                     
                     Button(action: {
@@ -95,8 +94,7 @@ struct RegisterView: View {
             .padding(.bottom, 40)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 4))
-            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+            .modifier(StaticNeumorphicWhiteBlackViewModifier(radius: 4, size: 4))
             .padding(.top, 25)
             
             
@@ -105,21 +103,11 @@ struct RegisterView: View {
             }) {
                 
                 Text("SIGNUP")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .padding(.vertical)
-                    .frame(width: UIScreen.main.bounds.width - 100)
                 
-            }.background(
-                
-                LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))]), startPoint: .leading, endPoint: .trailing)
-            )
-                .cornerRadius(8)
+            }
+                .buttonStyle(BackgroundNeumorphicBackgroundColorStyle(frame: CGSize(width: UIScreen.main.bounds.width - 100, height: 60), backgroundSelectedColor: bgButtonVLinaerGradient, backgroundColor: bgButtonVLinaerGradient))
                 .offset(y: -40)
                 .padding(.bottom, -40)
-                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 2, x: 4, y: 4)
-                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 2, x: -4, y: -4)
-
         }
         .padding(.horizontal)
     }

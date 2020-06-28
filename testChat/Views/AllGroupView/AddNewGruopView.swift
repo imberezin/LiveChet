@@ -29,20 +29,7 @@ struct AddNewGruopView: View {
         
         VStack(alignment: .leading) {
             
-            HStack(spacing: 15){
-                Spacer()
-                Text("New Group")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color.black)
-                    .multilineTextAlignment(.center)
-                Spacer()
-                
-            }.frame(height: 100)
-                .padding()
-                .padding(.top, 20)
-                .background(bgViewLinearGradient)
-                .clipShape(HomeCorenerShape())
+            SimpleTopView(firstRow: "New Group")
             
             ZStack(alignment: .top){
                 
@@ -120,6 +107,44 @@ struct AddNewGruopView: View {
 struct AddNewGruopView_Previews: PreviewProvider {
     static var previews: some View {
         AddNewGruopView(feedVM: FeedVM())
+    }
+}
+
+
+
+struct SimpleTopView: View {
+
+    var firstRow: String
+    var secRow: String = ""
+    
+    var body: some View {
+        
+        HStack(spacing: 15){
+            Spacer()
+            VStack(spacing: 15){
+
+                Text(self.firstRow)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.black)
+                    .multilineTextAlignment(.center)
+                
+                if self.secRow.count > 0 {
+                    Text(self.secRow)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.center)
+                }
+            }
+            Spacer()
+            
+        }.frame(height: 100)
+            .padding()
+            .padding(.top, 20)
+            .background(bgViewLinearGradient)
+            .clipShape(HomeCorenerShape())
+
     }
 }
 

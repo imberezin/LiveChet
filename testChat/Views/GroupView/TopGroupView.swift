@@ -41,7 +41,6 @@ struct TopGroupView: View {
                             
                             HStack(spacing: 18){
                                 
-                                
                                 ForEach(0 ..< self.feedVM.groupUsersArray.count ,id: \.self){i in
                                     
                                     VStack{
@@ -51,11 +50,7 @@ struct TopGroupView: View {
                                         }) {
                                             
                                             self.feedVM.groupUsersArray[i].image1
-                                                .renderingMode(.original)
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: 30, height: 30)
-                                                .clipShape(Circle())
+                                                .staticCircelImageViewModifier(imageSize: CGSize(width: 30, height: 30), shadowRadius: 1, shadowSize: 1)
                                                 .padding(.all, self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i]) ? 2 : 0)
                                                 .overlay(self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i]) ? Circle().stroke(lineWidth: 1).foregroundColor(Color(#colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 0.8992627641))).padding(.all, 1) : nil)
                                         }
@@ -96,8 +91,6 @@ struct TopGroupView: View {
                 
             }.background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).opacity(0.5))
                 .clipShape(Circle())
-            // .offset(y:-10)
-            
         }
     }
 }

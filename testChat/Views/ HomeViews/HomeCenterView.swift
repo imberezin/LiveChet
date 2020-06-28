@@ -50,7 +50,7 @@ struct HomeCenterView: View {
                 }
             }
         }.padding(.top, 10)
-            .background(Rectangle().fill(Color.white))
+            //.background(Rectangle().fill(Color.black.opacity(0.15)))
     }
 }
 

@@ -10,7 +10,6 @@ import SwiftUI
 
 struct GroupChetCell: View {
     
-//    @ObservedObject var feedVM: FeedVM
     let data: Message
     let user: User
     

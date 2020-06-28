@@ -23,21 +23,7 @@ struct AddNewComment: View {
             
             VStack(alignment: .leading) {
                 
-                HStack(spacing: 15){
-                    Spacer()
-                    Text("Post something")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.center)
-                    Spacer()
-
-                }.frame(height: 100)
-                .padding()
-                .padding(.top, 20)
-                .background(bgViewLinearGradient)
-                .clipShape(HomeCorenerShape())
-                
+                SimpleTopView(firstRow: "Post something")
                     
                 HStack(spacing: 15){
                     self.currUserVM.userImage
@@ -67,7 +53,7 @@ struct AddNewComment: View {
                             .fontWeight(.bold)
 
                     } .padding()
-                        .background(LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))]), startPoint: .leading, endPoint: .trailing))
+                        .background(bgButtonVLinaerGradient)
                     .cornerRadius(8)
                         .padding()
                 }

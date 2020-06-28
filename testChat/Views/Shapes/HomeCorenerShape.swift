@@ -17,3 +17,15 @@ struct HomeCorenerShape : Shape {
         return Path(path.cgPath)
     }
 }
+
+
+struct TopHomeCorenerShape : Shape {
+    
+    func path(in rect: CGRect) -> Path {
+        
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 50, height: 50))
+        
+        return Path(path.cgPath)
+    }
+}
+

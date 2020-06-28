@@ -33,7 +33,9 @@ struct AddNewGroupFormView: View {
                 Text("Add people to your group")
                 Spacer()
                 Button(action: {
-                    self.selectPeopleViewOpen.toggle()
+                    withAnimation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5)){
+                        self.selectPeopleViewOpen.toggle()
+                    }
                 }) {
                     Image(systemName: "plus")
                         .resizable()

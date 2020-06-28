@@ -21,15 +21,23 @@ struct HomeScreenView: View {
     
     var body: some View{
         ZStack{
+          // Color.black.opacity(0.05).edgesIgnoringSafeArea(.all)
+
             VStack{
                 HomeTopView(currUserVM: self.currUserVM, feedVM: self.feedVM, expand: self.$expand, showLogoutView: self.$showLogoutView)
                     .frame(height: 120)
                     .padding()
                     .padding(.top, 20)
                     .background(bgViewLinearGradient)
+                
                     .clipShape(HomeCorenerShape())
                     
                 HomeCenterView(expand: self.$expand, feedVM: self.feedVM)
+                    .clipShape(TopHomeCorenerShape())
+                   // .padding(.horizontal, 4)
+
+
+//                    .background(Color.black.opacity(0.15).edgesIgnoringSafeArea(.all))
             }.onAppear{
                 print("================================")
                 print(self.currUserVM.email)

@@ -17,81 +17,62 @@ struct SettingsUsersPickerView: View {
     @ObservedObject var preferedUsers: PreferedUsers
     
     @Binding var isSelectPeopleViewOpen: Bool
-        
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack{
-
+                    
                     Button(action: {
-                        print("Select all")
-                        self.selections = self.allEmails.map{ $0 }
-
+                        withAnimation{
+                            self.selections = self.allEmails.map{ $0 }
+                        }
+                
                     }) {
                         Text("Select all")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .fontWeight(.bold)
-                            .frame(width: 150, height: 25, alignment: .center)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 4))
-                            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                    }
-
+                    }.buttonStyle(BackgroundNeumorphicWhiteBlackStyle(size: CGSize(width: 150, height: 25)))
+                    
                     Spacer()
                     
                     Button(action: {
                         print("Remove all")
-                        self.selections.removeAll()
-
+                        withAnimation{
+                            self.selections.removeAll()
+                        }
+                        
                     }) {
                         Text("Remove all")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .fontWeight(.bold)
-                            .frame(width: 150, height: 25, alignment: .center)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 4))
-                            .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                    }
-
+                    }.buttonStyle(BackgroundNeumorphicWhiteBlackStyle(size: CGSize(width: 150, height: 25)))
+                    
                 }.padding([.top, .horizontal],16)
                 
                 List {
-                        ForEach(self.allEmails ,id:\.self ) { item in
-                            MultipleSelectionRow(title: item, isSelected: self.selections.contains(item)) {
-                                if self.selections.contains(item) {
-                                    self.selections.removeAll(where: { $0 == item })
-                                }
-                                else {
-                                    self.selections.append(item)
-                                }
+                    ForEach(self.allEmails ,id:\.self ) { item in
+                        MultipleSelectionRow(title: item, isSelected: self.selections.contains(item)) {
+                            if self.selections.contains(item) {
+                                self.selections.removeAll(where: { $0 == item })
+                            }
+                            else {
+                                self.selections.append(item)
                             }
                         }
-
+                    }
                 }
-
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 4))
-                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                .modifier(StaticNeumorphicWhiteBlackViewModifier(radius: 4, size: 4))
                 .padding([.horizontal],16)
                 .padding([.bottom,],24)
-
-               
-                
             }
             .onAppear(perform: {
                 self.getEmails()
                 self.selections = self.preferedUsers.selectedUsersArray
                 
             })
-              .edgesIgnoringSafeArea(.bottom)
-
+                .edgesIgnoringSafeArea(.bottom)
+                
                 .navigationBarTitle("Choose people to your group", displayMode: .inline)
                 .navigationBarItems(trailing:
                     Button(action: {
@@ -101,14 +82,7 @@ struct SettingsUsersPickerView: View {
                     }) {
                         Text("Done")
                     }
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 6)
-                    .font(.headline)
-                    .foregroundColor(.black)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 4))
-                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
+                    .buttonStyle(BackgroundNeumorphicWhiteBlackStyle(size: CGSize(width: 75, height: 25)))
             )
         }
     }

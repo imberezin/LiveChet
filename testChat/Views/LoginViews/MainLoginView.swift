@@ -23,7 +23,6 @@ struct MainLoginView: View {
     @State var height : CGFloat = 0
     
     @ObservedObject var loginVM: LoginVM = LoginVM()
-    //  var googleServise = GoogleServise()
     
     @State var showForgetPassView: Bool = false
     
@@ -40,7 +39,7 @@ struct MainLoginView: View {
                         
                         Image("liveChet")
                             .resizable()
-                            .frame(width: 180, height: 180)//.background(Color.red)
+                            .frame(width: 180, height: 180)
                             .clipShape(Circle())
                         
                         HStack{
@@ -110,15 +109,12 @@ struct MainLoginView: View {
                             }
                             .padding(.top, 20)
                         }
-                        
-                        
-                        
+                                                
                         HStack{
                             Rectangle().fill(Color.white)
                                 .frame(height: 2, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 4))
-                                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 2, x: 2, y: 2)
-                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 2, x: -2, y: -2)
+                                .modifier(StaticNeumorphicWhiteBlackViewModifier(radius: 2, size: 2))
                             Spacer()
                             Text("Or")
                                 .font(.headline)
@@ -129,74 +125,13 @@ struct MainLoginView: View {
                             Rectangle().fill(Color.white)
                                 .frame(height: 2, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 4))
-                                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 2, x: 2, y: 2)
-                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 2, x: -2, y: -2)
-                            
+                                .modifier(StaticNeumorphicWhiteBlackViewModifier(radius: 2, size: 2))
                         }
                         .padding()
                         .padding(.top, -10)
                         
+                        SocialLoginView(loginVM: self.loginVM)
                         
-                        HStack(spacing: 30){
-                            Button(action: {
-                                self.loginVM.biometricLogin()
-                            }) {
-                                
-                                self.loginVM.biometricImage()
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 40, height: 40)
-                                    .padding(.all,5)
-                                    .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                                    .clipShape(Circle())
-                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                            }
-                            
-                            Button(action: {
-                                self.loginVM.loginWIthGoogle()
-                            }) {
-                                
-                                Image("google")
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 40, height: 40)
-                                    .padding(.all,5)
-                                    .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                                    .clipShape(Circle())
-                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                            }
-                            Image("fb")
-                                .renderingMode(.original)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 40, height: 40)
-                                .padding(.all,5)
-                                .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                                .clipShape(Circle())
-                                .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                            
-                            Button(action: {
-                                self.loginVM.loginWithApple()
-                            }) {
-                                
-                                Image("appleLogin")
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 40, height: 40)
-                                    .padding(.all,5)
-                                    .background(Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)))
-                                    .clipShape(Circle())
-                                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5036586708)) , radius: 4, x: 4, y: 4)
-                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: -4, y: -4)
-                                
-                            }
-                        }
                         Spacer(minLength: self.height )
                         
                         
@@ -205,7 +140,6 @@ struct MainLoginView: View {
                     
                 }
             }.onAppear {
-                //  self.loginVM.test()
                 self.keyboardNotifcations()
             }
             if self.loginVM.alert{
@@ -213,7 +147,7 @@ struct MainLoginView: View {
                 ErrorView(bodyText: self.loginVM.error, closeAction: {self.loginVM.toggleAlert()})
             }
             if self.showForgetPassView{
-                ForgetPasswordView(loginVM: self.loginVM)
+                ForgetPasswordView(loginVM: self.loginVM, showForgetPassView: self.$showForgetPassView)
             }
             
         }
@@ -248,4 +182,57 @@ struct MainLoginView_Previews: PreviewProvider {
     static var previews: some View {
         MainLoginView()
     }
+}
+
+struct SocialLoginView: View {
+    
+    @ObservedObject var loginVM: LoginVM
+    
+    var body: some View {
+        HStack(spacing: 30){
+            Button(action: {
+                self.loginVM.biometricLogin()
+            }) {
+                
+                self.loginVM.biometricImage()
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFill()
+                
+            }.buttonStyle(CircleImageBackgroundNeumorphicColorStyle(size: CGSize(width: 40, height: 40), backgroundColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)), backgroundSelectedColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1))))
+            
+            
+            Button(action: {
+                self.loginVM.loginWIthGoogle()
+            }) {
+                
+                Image("google")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFill()
+                
+            }.buttonStyle(CircleImageBackgroundNeumorphicColorStyle(size: CGSize(width: 40, height: 40), backgroundColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)), backgroundSelectedColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1))))
+            
+            Button(action: {
+                print("login witg FB")
+            }) {
+                
+                Image("fb")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFill()
+            }.buttonStyle(CircleImageBackgroundNeumorphicColorStyle(size: CGSize(width: 40, height: 40), backgroundColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)), backgroundSelectedColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1))))
+            
+            Button(action: {
+                self.loginVM.loginWithApple()
+            }) {
+                
+                Image("appleLogin")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFill()
+            }.buttonStyle(CircleImageBackgroundNeumorphicColorStyle(size: CGSize(width: 40, height: 40), backgroundColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1)), backgroundSelectedColor: Color(#colorLiteral(red: 0.101217337, green: 0.458863616, blue: 0.8176777363, alpha: 1))))
+        }
+    }
+
 }
