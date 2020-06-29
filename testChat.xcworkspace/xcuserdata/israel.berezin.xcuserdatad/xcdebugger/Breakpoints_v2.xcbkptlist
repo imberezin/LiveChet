@@ -30,9 +30,9 @@
             filePath = "testChat/Views/LoginViews/MainLoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "body"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loginVM"
             landmarkType = "24">
             <Locations>
                <Location
@@ -1194,8 +1194,8 @@
             filePath = "testChat/Views/LoginViews/MainLoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1242,8 +1242,8 @@
             filePath = "testChat/Views/LoginViews/MainLoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -2060,7 +2060,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "141"
                   endingLineNumber = "141"
-                  offsetFromSymbolStart = "50">
+                  offsetFromSymbolStart = "164">
                </Location>
                <Location
                   uuid = "83E40539-D78B-44ED-8468-95C0F94BC319 - d7d786c3776a2145"
@@ -2075,7 +2075,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "143"
                   endingLineNumber = "143"
-                  offsetFromSymbolStart = "192">
+                  offsetFromSymbolStart = "184">
                </Location>
             </Locations>
          </BreakpointContent>

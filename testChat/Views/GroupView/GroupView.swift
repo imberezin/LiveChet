@@ -61,7 +61,7 @@ struct GroupView: View {
                         .background(Color.white)
                         .clipShape(RoundedShape())
                         .onTapGesture {
-                            self.dissmisKeyborad()
+                            Helper.instance.dissmisKeyborad()
                         }.onAppear {
                             UITableView.appearance().separatorStyle = .none
                         }
@@ -81,7 +81,7 @@ struct GroupView: View {
                             Button(action: {
                                 withAnimation{
                                     self.postToGroup()
-                                    self.dissmisKeyborad()
+                                    Helper.instance.dissmisKeyborad()
                                 }
                             }) {
                                 Text("Post")
@@ -139,15 +139,15 @@ struct GroupView: View {
         }
     }
     
-    func dissmisKeyborad(){
-        let keyWindow = UIApplication.shared.connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .map({$0 as? UIWindowScene})
-            .compactMap({$0})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
-        keyWindow!.endEditing(true)
-    }
+//    func dissmisKeyborad(){
+//        let keyWindow = UIApplication.shared.connectedScenes
+//            .filter({$0.activationState == .foregroundActive})
+//            .map({$0 as? UIWindowScene})
+//            .compactMap({$0})
+//            .first?.windows
+//            .filter({$0.isKeyWindow}).first
+//        keyWindow!.endEditing(true)
+//    }
     
     func postToGroup(){
         if self.text.count > 0 {

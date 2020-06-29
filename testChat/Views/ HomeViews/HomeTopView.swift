@@ -13,7 +13,7 @@ struct HomeTopView: View {
     
     @ObservedObject var currUserVM :CurrUserVM
     @ObservedObject var feedVM: FeedVM
-
+    
     @State var search = ""
     @State var showingDetail: Bool = false
     
@@ -74,11 +74,25 @@ struct HomeTopView: View {
                 
                 TextField("Search", text: self.$feedVM.searchTerm)
                 
+                if !self.feedVM.searchTerm.isEmpty {
+                    Button(action: {
+                        
+                        withAnimation {
+                            self.feedVM.searchTerm = ""
+                            Helper.instance.dissmisKeyborad()
+                        }
+                        
+                    }) {
+                        
+                        Image(systemName: "xmark").foregroundColor(.black)
+                    }
+                    .padding(.horizontal, 8)
+                }
+                
             }.padding()
                 .background(Color.white)
                 .cornerRadius(8)
                 .padding(.bottom, 10)
-            
         }
         
     }

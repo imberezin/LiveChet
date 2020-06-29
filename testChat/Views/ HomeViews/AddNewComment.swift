@@ -44,7 +44,7 @@ struct AddNewComment: View {
                 HStack{
                     Spacer()
                     Button(action: {
-                        self.dissmisKeyborad()
+                        Helper.instance.dissmisKeyborad()
                         self.post()
 
                     }) {
@@ -59,23 +59,23 @@ struct AddNewComment: View {
                 }
                 Spacer()
             }.onTapGesture {
-                self.dissmisKeyborad()
+                Helper.instance.dissmisKeyborad()
             }
         }.onAppear(){
             
         }
     }
     
-    func dissmisKeyborad(){
-        let keyWindow = UIApplication.shared.connectedScenes
-                           .filter({$0.activationState == .foregroundActive})
-                           .map({$0 as? UIWindowScene})
-                           .compactMap({$0})
-                           .first?.windows
-                           .filter({$0.isKeyWindow}).first
-        keyWindow!.endEditing(true)
-
-    }
+//    func dissmisKeyborad(){
+//        let keyWindow = UIApplication.shared.connectedScenes
+//                           .filter({$0.activationState == .foregroundActive})
+//                           .map({$0 as? UIWindowScene})
+//                           .compactMap({$0})
+//                           .first?.windows
+//                           .filter({$0.isKeyWindow}).first
+//        keyWindow!.endEditing(true)
+//
+//    }
     
     func post(){
         if self.text.count > 0 {
