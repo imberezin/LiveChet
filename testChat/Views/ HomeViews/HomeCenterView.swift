@@ -15,9 +15,11 @@ struct HomeCenterView: View {
     @ObservedObject var feedVM: FeedVM
     var body : some View{
         
-        VStack{
+        let filteredMsg = self.feedVM.searchTerm.isEmpty ? self.feedVM.messageArray : self.feedVM.messageArray.filter { $0.content.lowercased().contains(self.feedVM.searchTerm.lowercased()) }
+
+        return VStack{
             if feedVM.messageArray.count > 0 {
-                List(feedVM.messageArray){ message in
+                List(filteredMsg){ message in
                     
                     HStack(alignment: .top, spacing: 12){
                         if self.feedVM.updateView{

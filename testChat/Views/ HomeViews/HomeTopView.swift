@@ -62,10 +62,8 @@ struct HomeTopView: View {
                     }.sheet(isPresented: $showingDetail) {
                         AddNewComment(feedVM: self.feedVM)
                     }
-                    
                 }
             }
-            
             
             HStack(spacing: 15){
                 
@@ -74,7 +72,7 @@ struct HomeTopView: View {
                     .frame(width: 18, height: 18)
                     .foregroundColor(Color.black.opacity(0.3))
                 
-                TextField("Search", text: self.$search)
+                TextField("Search", text: self.$feedVM.searchTerm)
                 
             }.padding()
                 .background(Color.white)

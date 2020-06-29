@@ -14,6 +14,9 @@ import SwiftUI
 class FeedVM: ObservableObject {
     
     @Published var messageArray = [Message]()
+
+    @Published var searchTerm: String = ""
+
     @Published var userArray = [User]()
     var oldUserArray = [User]()
     @Published var updateView: Bool = false
@@ -39,8 +42,6 @@ class FeedVM: ObservableObject {
                 
                 self.messageArray = returnMessagesArray
                 
-//                print(self.messageArray)
-                
                 if self.messageArray.count > 0{
                     
                     let usersKeys: [String] = self.messageArray.map({$0.senderId})
@@ -61,9 +62,6 @@ class FeedVM: ObservableObject {
             }
         }
     }
-    
-    
-    
     
     func getMessageUser(message: Message, isGroup:Bool = false) -> User{
         var users = self.userArray
@@ -154,7 +152,6 @@ class FeedVM: ObservableObject {
             let newUser = User(name: user.name, image: decodedimage, image1: decodedimage1, userImageUrl: user.userImageUrl, senderId: user.key)
             temp.append(newUser)
         }
-//        print(temp)
         return temp
     }
     
