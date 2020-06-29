@@ -42,6 +42,9 @@ struct HomeCenterView: View {
                     
                     
                 }
+                .animation(nil) // reomve default list animation
+                .animation(.linear(duration: 0.3)) // set custom list animation
+
             }else{
                 List{
                     ForEach(0..<6 ,id: \.self){_ in
