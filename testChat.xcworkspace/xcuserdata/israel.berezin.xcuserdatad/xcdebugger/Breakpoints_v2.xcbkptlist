@@ -30,9 +30,9 @@
             filePath = "testChat/Views/LoginViews/MainLoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "loginVM"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
@@ -250,8 +250,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "getAllFeedes()"
             landmarkType = "7">
             <Locations>
@@ -314,8 +314,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "getAllFeedes()"
             landmarkType = "7">
             <Locations>
@@ -362,8 +362,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "getAllFeedes()"
             landmarkType = "7">
             <Locations>
@@ -410,8 +410,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "getAllFeedes()"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,8 +522,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "loadGroupData(group:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -538,8 +538,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "getAllFeedes()"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,8 +554,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "getMessageUser(message:isGroup:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -570,8 +570,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getMessageUser(message:isGroup:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,8 +586,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "createUsersArray(usersFromDB:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,8 +602,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "getMessageUser(message:isGroup:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -618,8 +618,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "getMessageUser(message:isGroup:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,8 +634,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "loadGroupData(group:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -650,8 +650,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "loadAllGroups()"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,8 +666,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "loadAllGroups()"
             landmarkType = "7">
             <Locations>
@@ -874,8 +874,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "getAllFeedes()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1114,8 +1114,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "loadGroupData(group:)"
             landmarkType = "7">
             <Locations>
@@ -1162,8 +1162,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "loadTempUsersData(numberOfUsers:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1178,8 +1178,8 @@
             filePath = "testChat/Views/GroupView/TopGroupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -1194,8 +1194,8 @@
             filePath = "testChat/Views/LoginViews/MainLoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1242,8 +1242,8 @@
             filePath = "testChat/Views/LoginViews/MainLoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -1370,8 +1370,8 @@
             filePath = "testChat/Views/GroupView/GroupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "postToGroup()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2003,22 +2003,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "264C4568-8B7B-4BE0-9CE9-357AC3EAF7D4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testChat/ManagesAndServices/DataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "updateUserImage(image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "670A6EBA-B664-40AE-9790-7398AFA55DB4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2026,8 +2010,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "loadAllGroups()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2042,8 +2026,8 @@
             filePath = "testChat/ManagesAndServices/DataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "getUserImage(forUID:handler:)"
             landmarkType = "7">
             <Locations>
@@ -2058,9 +2042,9 @@
                   urlString = "file:///Users/israel.berezin/Documents/BerezinGits/LiveChet/testChat/ManagesAndServices/DataService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "164">
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "50">
                </Location>
                <Location
                   uuid = "83E40539-D78B-44ED-8468-95C0F94BC319 - d7d786c3776a2145"
@@ -2073,9 +2057,9 @@
                   urlString = "file:///Users/israel.berezin/Documents/BerezinGits/LiveChet/testChat/ManagesAndServices/DataService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
-                  offsetFromSymbolStart = "184">
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "192">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2084,14 +2068,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1C392E0D-14F0-4E59-AE5B-071FAEFF3CBF"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testChat/ManagesAndServices/DataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "getUsers(forUID:handler:)"
             landmarkType = "7">
             <Locations>
@@ -2106,8 +2090,8 @@
                   urlString = "file:///Users/israel.berezin/Documents/BerezinGits/LiveChet/testChat/ManagesAndServices/DataService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
                   offsetFromSymbolStart = "169">
                </Location>
                <Location
@@ -2121,91 +2105,11 @@
                   urlString = "file:///Users/israel.berezin/Documents/BerezinGits/LiveChet/testChat/ManagesAndServices/DataService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "185">
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "227">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "96B838D0-A922-410C-A21E-5A367323CB21"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testChat/ManagesAndServices/DataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "getEmail(forSearchQuery:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "136345A5-821B-4FED-B6AB-459B62519CC0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testChat/ManagesAndServices/DataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
-            landmarkName = "getIds(forUsernames:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1144DE8-4DE3-4E86-84E1-853B3A38FDBF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testChat/ManagesAndServices/DataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "getEmail(forSearchQuery:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "07FF2442-E94C-4CAE-98CD-AB231D8654EA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testChat/ManagesAndServices/DataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "getEmail(forSearchQuery:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BD95C1B7-7A8A-49DD-97E0-07CB87EBC492"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testChat/ManagesAndServices/DataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "getEmail(forSearchQuery:handler:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2282,8 +2186,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "loadAllGroups()"
             landmarkType = "7">
             <Locations>
@@ -2330,8 +2234,8 @@
             filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "removeAllGroupsObserver()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2446,6 +2350,278 @@
                   offsetFromSymbolStart = "38">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DA51462-169A-446B-B5E8-A38F09A89EBE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "getAllTypeingNowUsers(group:uid:email:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0D9E5E3-0450-44CF-B4A7-4E4E887B3165"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/Views/GroupView/GroupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "068A6237-09BB-4459-AC03-FBA233AC0B93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/Views/GroupView/GroupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E88BB8B-76C7-4589-847F-CD7698035ADB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "updateIsUserTypeingNow(group:forUID:email:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E8C916C-1824-42F3-9BA9-5E384B4F9A7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "updateIsUserTypeingNow(group:forUID:email:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FD6B2B9-0991-48F6-AF32-6497A7EC07E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "application(_:didDiscardSceneSessions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56F4A89D-D53C-4463-9C98-F515C65B2467"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ManagesAndServices/Helper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "removeTypingWhenCloseApp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E780271-A824-431A-B23C-2D32D9A2015E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/Views/GroupView/TopGroupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "isTypingUser(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51C4C9F8-D9E2-4529-824E-67291A7418C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/Views/GroupView/TopGroupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "isTypingUser(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EA38AE5-7786-4F18-BC3F-51796645741C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/Views/GroupView/TopGroupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "isTypingUser(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A67552E-E22A-4BE1-B52B-3B97233BF523"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "loadGroupData(group:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DC4A518-6919-4318-98ED-A18A12802BAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ViewModel/&#xa0;FeedVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "loadGroupData(group:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1335A11E-77FF-4433-A161-DFDA5948C603"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ManagesAndServices/DataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "getUsersFor(group:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1335A11E-77FF-4433-A161-DFDA5948C603 - 79b12fd382ca3f43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Live_Chat.DataService.getUsersFor(group: Live_Chat.Group, handler: (Swift.Array&lt;(name: Swift.String, provider: Swift.String, userImage: Swift.Optional&lt;Swift.String&gt;, userImageUrl: Swift.Optional&lt;Swift.String&gt;, key: Swift.String)&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Live Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/israel.berezin/Documents/BerezinGits/LiveChet/testChat/ManagesAndServices/DataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "1335A11E-77FF-4433-A161-DFDA5948C603 - 6dc884f55f90deb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;(name: Swift.String, provider: Swift.String, userImage: Swift.Optional&lt;Swift.String&gt;, userImageUrl: Swift.Optional&lt;Swift.String&gt;, key: Swift.String)&gt;) -&gt; () in Live_Chat.DataService.getUsersFor(group: Live_Chat.Group, handler: (Swift.Array&lt;(name: Swift.String, provider: Swift.String, userImage: Swift.Optional&lt;Swift.String&gt;, userImageUrl: Swift.Optional&lt;Swift.String&gt;, key: Swift.String)&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Live Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/israel.berezin/Documents/BerezinGits/LiveChet/testChat/ManagesAndServices/DataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F013B43-38AB-4F9B-861A-6BE290691950"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ManagesAndServices/DataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "getUsers(forUID:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DD70F4D-C494-4FD5-B724-DDB5A38E7BA0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testChat/ManagesAndServices/DataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "getUsers(forUID:handler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

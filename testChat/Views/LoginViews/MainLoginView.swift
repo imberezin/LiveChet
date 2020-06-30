@@ -19,6 +19,10 @@ struct MainLoginView: View {
     
     @State var showForgetPassView: Bool = false
     
+    private let accountCreationTransition = AnyTransition.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing))
+    
+    private let loginTransition = AnyTransition.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
+    
     var body: some View {
         
         ZStack{
@@ -80,11 +84,11 @@ struct MainLoginView: View {
                             .padding(.top, -15)
                         
                         if self.index == 0{
-                            LoginView(loginVM: self.loginVM)
+                            LoginView(loginVM: self.loginVM)//.transition(loginTransition)
                                 .padding(.top, -15)
                         }
                         else{
-                            RegisterView(loginVM: self.loginVM)
+                            RegisterView(loginVM: self.loginVM)//.transition(accountCreationTransition)
                                 .padding(.top, -15)
                         }
                         

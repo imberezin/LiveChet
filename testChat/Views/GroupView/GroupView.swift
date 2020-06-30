@@ -33,6 +33,16 @@ struct GroupView: View {
             self.indexPathToSetVisible = IndexPath(row: self.feedVM.messageArray.count - 1, section: 0)
         }
 
+        if self.isEditing {
+            self.feedVM.isTypeingNow = true
+            self.feedVM.updateIsUserTypeingNow(group: self.selectedGroup, forUID: self.currUserVM.userUid!, email: self.currUserVM.email)
+        }else{
+            if self.feedVM.isTypeingNow == true {
+                self.feedVM.isTypeingNow = false
+                self.feedVM.updateIsUserTypeingNow(group: self.selectedGroup, forUID: self.currUserVM.userUid!, email: self.currUserVM.email)
+            }
+
+        }
         return GeometryReader{ geometry in
             VStack{
                 if self.feedVM.updateGView{
@@ -49,6 +59,7 @@ struct GroupView: View {
                 if self.feedVM.messageArray.count > 0 {
 
                     VStack {
+                       
                         List(self.feedVM.messageArray, id: \.id) {data in
                             GroupChetCell(data: data, user: self.feedVM.getMessageUser(message: data, isGroup: true))
 
@@ -120,6 +131,9 @@ struct GroupView: View {
                 self.feedVM.loadGroupData(group: self.selectedGroup)
             }
         }.edgesIgnoringSafeArea(.top)
+        .onAppear(perform: {
+            self.feedVM.getAllTypeingNowUsers(group: self.selectedGroup, uid: self.currUserVM.userUid!, email: self.currUserVM.email)
+        })
     }
     
     
@@ -154,6 +168,7 @@ struct GroupView: View {
             
             self.feedVM.uploadNewPost(withMessage: self.text, forUID: self.currUserVM.userUid!, withGroupKey: self.selectedGroup.key){ isCopmlete in
                 self.text = ""
+                self.isEditing = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                    self.indexPathToSetVisible = IndexPath(row: self.feedVM.messageArray.count - 1, section: 0)
                }

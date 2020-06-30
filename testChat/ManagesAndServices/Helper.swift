@@ -24,6 +24,9 @@ class Helper: NSObject {
     
     static let instance = Helper()
 
+    let feed = FeedVM()
+    let user = CurrUserVM()
+    var typingGrup: Group? = nil
     
     func dissmisKeyborad(){
         let keyWindow = UIApplication.shared.connectedScenes
@@ -35,5 +38,16 @@ class Helper: NSObject {
         keyWindow!.endEditing(true)
     }
 
+    func saveTypingGroup(group: Group?){
+        self.typingGrup = group
+    }
+    func removeTypingWhenCloseApp() {
+        if let group = self.typingGrup {
+            self.feed.updateIsUserTypeingNow(group: group, forUID: user.userUid!, email: user.email)
+        }else{
+            print("not typing now")
+        }
+    }
+    
     
 }

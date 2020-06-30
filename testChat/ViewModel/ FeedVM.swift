@@ -25,8 +25,36 @@ class FeedVM: ObservableObject {
 
     @Published var groupsArray = [Group]()
     @Published var groupUsersArray = [User]()
+    @Published var typingUsersArray = [BasicDBUser]()
+
+    var isTypeingNow: Bool = false
+
     
     var refHandle: UInt?
+    
+    func updateIsUserTypeingNow(group: Group,forUID uid: String, email: String){
+        if isTypeingNow{
+            Helper.instance.saveTypingGroup(group: group)
+            DataService.instance.addTypingUser(group: group, uid: uid, email: email)
+        }else{
+            Helper.instance.saveTypingGroup(group: nil)
+            DataService.instance.removeTypingUser(group: group, uid: uid)
+        }
+    }
+    
+    func getAllTypeingNowUsers(group: Group, uid: String, email: String){
+
+        DataService.instance.REF_USERS_TYPING_NOW.observe(.value) { (snapshot) in
+
+            DataService.instance.getTypingNow(group: group){ basicDBUser in
+                print("getAllTypeingNowUsers :")
+                print(basicDBUser)
+                self.typingUsersArray = basicDBUser
+            }
+        }
+    }
+    
+    
     
     func getAllFeedes(){
         

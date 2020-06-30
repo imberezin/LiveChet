@@ -16,11 +16,14 @@ struct TopGroupView: View {
     @ObservedObject var currUserVM: CurrUserVM
     @ObservedObject var feedVM: FeedVM
     let selectedGroup: Group
+    var typingUser: [String] = [String]()
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        ZStack (alignment: .topLeading) {
+        //        self.typingUser = self.feedVM.typingUsersArray.map({$0.name})
+        print(self.feedVM.groupUsersArray)
+        return  ZStack (alignment: .topLeading) {
             VStack(alignment: .center, spacing: 8){
                 
                 Text(self.selectedGroup.groupTitle)
@@ -49,12 +52,16 @@ struct TopGroupView: View {
                                             
                                         }) {
                                             
-                                            self.feedVM.groupUsersArray[i].image1
-                                                .staticCircelImageViewModifier(imageSize: CGSize(width: 30, height: 30), shadowRadius: 1, shadowSize: 1)
-                                                .padding(.all, self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i]) ? 2 : 0)
-                                                .overlay(self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i]) ? Circle().stroke(lineWidth: 1).foregroundColor(Color(#colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 0.8992627641))).padding(.all, 1) : nil)
+                                            ZStack{
+                                                self.feedVM.groupUsersArray[i].image1
+                                                    .staticCircelImageViewModifier(imageSize: CGSize(width: 30, height: 30), shadowRadius: 1, shadowSize: 1)
+                                                    .padding(.all, self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i]) ? 2 : 0)
+                                                    .overlay(self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i]) ? AnyView(CurrUserOverlay()) :  nil)
+                                                if (self.isTypingUser(user: self.feedVM.groupUsersArray[i]) && !self.currUserVM.isMyUser(user: self.feedVM.groupUsersArray[i])) {
+                                                    TypeingNowUserOverlay()
+                                                }
+                                            }
                                         }
-                                        
                                         Text(self.feedVM.groupUsersArray[i].name)
                                             .font(.footnote)
                                             .fontWeight(.medium)
@@ -93,6 +100,19 @@ struct TopGroupView: View {
                 .clipShape(Circle())
         }
     }
+    
+    func isTypingUser(user: User) ->Bool{
+        print("==========")
+        print(user.name)
+        let typingUser = self.feedVM.typingUsersArray.map({$0.name})
+        print(typingUser)
+        if typingUser.contains(user.name) {
+            return true
+        }
+        
+        
+        return false
+    }
 }
 
 struct TopGroupView_Previews: PreviewProvider {
@@ -101,7 +121,36 @@ struct TopGroupView_Previews: PreviewProvider {
     }
 }
 
+struct TypeingNowUserOverlay: View{
+    
+    @State var revealStroke: Bool = false
+    
+    var body: some View {
+        
+        Circle()
+            .trim(from: self.revealStroke ? 0 : 1, to: 1)
+            .stroke(style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round, miterLimit: 10, dash: [1, 5], dashPhase: 20))
+            .frame(width: 32, height: 32)
+            //            .padding(.all, 1)
+            .foregroundColor(Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 0.9)))
+            .rotationEffect(.degrees(90))
+            .rotation3DEffect(.degrees(180), axis: (x:  1, y: 0, z: 0))
+            .animation(Animation.easeOut(duration: 10).delay(1).repeatForever(autoreverses: false))
+            .onAppear {
+                self.revealStroke.toggle()
+        }
+    }
+}
 
 
+
+struct CurrUserOverlay: View{
+    
+    var body: some View{
+        
+        Circle().stroke(lineWidth: 1).foregroundColor(Color(#colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 0.8992627641))).padding(.all, 1)
+        
+    }
+}
 
 
